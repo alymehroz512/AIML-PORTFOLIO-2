@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+:root {
+  --accent: #f5f5f5;
+  --text: #333;
+  --primary: #ff0033;
+}
+/* 🌌 Hero Section */
+.toolkit-hero-section {
+  background-image: url("../assets/ToolkitHero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(4vh, 8vh, 10vh) clamp(4vw, 6vw, 10vw);
+}
+.toolkit-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.toolkit-inner-container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+}
+.toolkit-content {
+  width: 100%;
+  max-width: 900px;
+  padding: clamp(30px, 6vw, 80px);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.toolkit-subheading {
+  color: var(--primary);
+  font-size: clamp(2.2rem, 6vw, 6rem);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+/* 📱 Responsive Layouts */
+@media (max-width: 1024px) {
+  .toolkit-content {
+    padding: 40px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .toolkit-subheading {
+    text-align: center;
+  }
+  .toolkit-content {
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .toolkit-subheading {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+}
+/* 🛠️ Toolkit Section */
+.toolkit-section {
+  background-image: url("../assets/ToolkitSecond.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(60px, 8vw, 120px) clamp(4vw, 6vw, 10vw);
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+}
+.toolkit-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+.toolkit-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* 🧠 Tagline */
+.toolkit-tagline {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: clamp(30px, 5vw, 60px);
+  color: #333;
+}
+/* 🧱 Toolkit Item */
+.toolkit-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 4px solid var(--primary);
+  padding: clamp(20px, 5vw, 50px);
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  /* border-radius: 0 8px 8px 0; */
+}
+.toolkit-item:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateX(10px);
+  box-shadow: 0 4px 12px rgba(255, 0, 51, 0.15);
+}
+.toolkit-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: clamp(10px, 2vw, 20px);
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd;
+}
+.toolkit-number {
+  background: var(--primary);
+  color: #fff;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.toolkit-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.toolkit-title {
+  color: var(--text);
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
+  text-transform: uppercase;
+  margin: 0;
+}
+.toolkit-duration {
+  color: var(--primary);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  background: rgba(255, 0, 51, 0.1);
+  padding: 4px 16px;
+  min-width: 150px;
+  text-align: center;
+}
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #cc0026);
+  transition: width 1.5s ease-in-out;
+  box-shadow: 0 2px 4px rgba(255, 0, 51, 0.3);
+}
+.toolkit-body p {
+  color: #444;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  line-height: 1.8;
+  margin: 0;
+}
+/* 📱 Responsive Layouts */
+@media (max-width: 1024px) {
+  .toolkit-item {
+    padding: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .toolkit-tagline {
+    font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+  }
+  .toolkit-item {
+    padding: 25px;
+    margin: 0 10px;
+  }
+  .toolkit-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .toolkit-duration {
+    align-self: flex-end;
+  }
+}
+@media (max-width: 480px) {
+  .toolkit-item {
+    padding: 20px;
+    margin: 0 5px;
+  }
+  .toolkit-number {
+    font-size: 0.8rem;
+  }
+  .toolkit-duration {
+    font-size: 0.9rem;
+  }
+}
