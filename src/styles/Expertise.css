@@ -98,7 +98,6 @@
   font-size: clamp(1.5rem, 4vw, 2.4rem);
   margin-bottom: clamp(8px, 2vw, 12px);
   color: #333;
-  font-weight: 700;
 }
 
 .skills-subtitle {

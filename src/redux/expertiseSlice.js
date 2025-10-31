@@ -10,11 +10,11 @@ const initialState = {
     "Empowering data with intelligence crafting AI solutions that merge innovation, performance, and human centered design",
 
   coreSkillsSection: {
-    heading: "Core Skills",
+    heading: "Core Experties",
     subtitle: "10 years professional AI and ML developer",
   },
   secondarySkillsSection: {
-    heading: "Secondary Skills",
+    heading: "Supporting Experties",
     subtitle: "Additional expertise across AI ecosystem",
   },
 
