@@ -8,7 +8,7 @@
 
 /* 🌌 Hero Section */
 .expertise-hero-section {
-  background-image: url("../assets/ExpertiseHero.jpg");
+  background-image: url("../assets/ExpertiseHero.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -209,9 +209,6 @@
 }
 
 @media (max-width: 480px) {
-  .expertise-hero-section {
-    min-height: 80vh;
-  }
 
   .expertise-subheading {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
