@@ -94,7 +94,7 @@
 
 /* 🧱 Experience Card */
 .experience-card {
-  background: #fff;
+  background: #FFEBEE;
   border: 2px solid var(--primary);
   padding: clamp(20px, 5vw, 50px);
   width: 100%;
