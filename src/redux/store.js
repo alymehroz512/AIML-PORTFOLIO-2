@@ -6,7 +6,7 @@ import expertiseReducer from "./expertiseSlice";
 import experienceReducer from "./experienceSlice";
 import toolkitReducer from "./toolkitSlice";
 import contactReducer from "./contactSlice";
-// import projectsReducer from "./projectsSlice"; 
+import projectsReducer from "./projectsSlice"; 
 
 export const store = configureStore({
   reducer: {
@@ -17,6 +17,6 @@ export const store = configureStore({
     experience: experienceReducer,
     toolkit: toolkitReducer,
     contact: contactReducer,
-    // projects: projectsReducer, 
+    projects: projectsReducer, 
   },
 });
