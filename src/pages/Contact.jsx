@@ -26,13 +26,11 @@ const Contact = () => {
           </Col>
         </div>
       </Container>
-
       {/* 📞 Contact Section (merged with form + background image) */}
       <Container fluid className="contact-section">
         <div className="contact-container">
           {/* 🧠 Tagline */}
           <h2 className="contact-tagline">{tagline.text}</h2>
-
           {/* 📇 Contact Info Cards */}
           <Row className="contact-list">
             {contactInfo.map((info, index) => (
@@ -57,7 +55,6 @@ const Contact = () => {
               </Col>
             ))}
           </Row>
-
           {/* 📝 Contact Form Section (inside same container) */}
           <div className="form-container">
             <div className="form-content">
@@ -65,7 +62,6 @@ const Contact = () => {
                 Whether you have a project in mind or just want to connect, I'm
                 all ears! Fill out the form below to start the conversation
               </h2>
-
               <form className="contact-form">
                 <div className="form-group">
                   <input
@@ -76,7 +72,6 @@ const Contact = () => {
                     className="form-input"
                   />
                 </div>
-
                 <div className="form-group">
                   <input
                     type="email"
@@ -86,7 +81,6 @@ const Contact = () => {
                     className="form-input"
                   />
                 </div>
-
                 <div className="form-group">
                   <input
                     type="tel"
@@ -96,7 +90,6 @@ const Contact = () => {
                     className="form-input"
                   />
                 </div>
-
                 <div className="form-group">
                   <input
                     type="text"
@@ -106,7 +99,6 @@ const Contact = () => {
                     className="form-input"
                   />
                 </div>
-
                 <div className="form-group">
                   <textarea
                     placeholder="Message"
@@ -119,7 +111,6 @@ const Contact = () => {
                   ></textarea>
                   <span className="char-count">{message.length}/1500</span>
                 </div>
-
                 {/* ✅ Send Button with Icon */}
                 <button type="submit" className="form-submit text-uppercase" style={{cursor: 'none'}}>
                   Send Message <MdSend className="send-icon" />
