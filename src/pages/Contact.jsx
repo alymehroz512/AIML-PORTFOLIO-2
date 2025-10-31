@@ -26,11 +26,13 @@ const Contact = () => {
           </Col>
         </div>
       </Container>
+
       {/* 📞 Contact Section (merged with form + background image) */}
       <Container fluid className="contact-section">
         <div className="contact-container">
           {/* 🧠 Tagline */}
           <h2 className="contact-tagline">{tagline.text}</h2>
+
           {/* 📇 Contact Info Cards */}
           <Row className="contact-list">
             {contactInfo.map((info, index) => (
@@ -55,6 +57,7 @@ const Contact = () => {
               </Col>
             ))}
           </Row>
+
           {/* 📝 Contact Form Section (inside same container) */}
           <div className="form-container">
             <div className="form-content">
@@ -66,7 +69,7 @@ const Contact = () => {
                 <div className="form-group">
                   <input
                     type="text"
-                    placeholder="Name"
+                    placeholder="Enter Your Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="form-input"
@@ -75,7 +78,7 @@ const Contact = () => {
                 <div className="form-group">
                   <input
                     type="email"
-                    placeholder="Email"
+                    placeholder="Enter Your Email Address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="form-input"
@@ -84,7 +87,7 @@ const Contact = () => {
                 <div className="form-group">
                   <input
                     type="tel"
-                    placeholder="Phone Number"
+                    placeholder="Enter Your Phone Number"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="form-input"
@@ -93,7 +96,7 @@ const Contact = () => {
                 <div className="form-group">
                   <input
                     type="text"
-                    placeholder="Subject"
+                    placeholder="Enter Your Subject Name"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     className="form-input"
@@ -101,7 +104,7 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                   <textarea
-                    placeholder="Message"
+                    placeholder="Enter Your Message Here !"
                     value={message}
                     style={{ height: "220px" }}
                     onChange={handleMessageChange}
