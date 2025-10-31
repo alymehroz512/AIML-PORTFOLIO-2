@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 :root {
   --accent: #f5f5f5;
   --text: #333;
   --primary: #ff0033;
 }
+
 /* 🌌 Hero Section */
 .contact-hero-section {
   background-image: url("../assets/ContactHero.jpg");
@@ -19,6 +21,7 @@
   justify-content: flex-start;
   padding: clamp(4vh, 8vh, 10vh) clamp(4vw, 6vw, 10vw);
 }
+
 .contact-hero-section::before {
   content: "";
   position: absolute;
@@ -26,6 +29,7 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
+
 .contact-inner-container {
   width: 100%;
   position: relative;
@@ -33,6 +37,7 @@
   display: flex;
   justify-content: flex-start;
 }
+
 .contact-content {
   width: 100%;
   max-width: 900px;
@@ -43,6 +48,7 @@
   align-items: flex-start;
   justify-content: center;
 }
+
 .contact-subheading {
   color: var(--primary);
   font-size: clamp(2.2rem, 6vw, 6rem);
@@ -51,28 +57,10 @@
   letter-spacing: 2px;
   line-height: 1.1;
 }
-/* 📱 Responsive Layouts */
-@media (max-width: 1024px) {
-  .contact-content {
-    padding: 40px 30px;
-  }
-}
-@media (max-width: 768px) {
-  .contact-subheading {
-    text-align: center;
-  }
-  .contact-content {
-    align-items: center;
-  }
-}
-@media (max-width: 480px) {
-  .contact-subheading {
-    font-size: clamp(1.8rem, 8vw, 2.4rem);
-  }
-}
-/* 📞 Contact Section */
+
+/* 📞 Contact Section with Background */
 .contact-section {
-  background-image: url("../assets/ContactSecond.jpg");
+  background-image: url("../assets/ContactSecond.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,6 +68,7 @@
   position: relative;
   font-family: "Quicksand", sans-serif;
 }
+
 .contact-section::before {
   content: "";
   position: absolute;
@@ -87,82 +76,189 @@
   background: rgba(255, 255, 255, 0.9);
   z-index: 1;
 }
+
 .contact-container {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 /* 🧠 Tagline */
 .contact-tagline {
   text-align: center;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   margin-bottom: clamp(30px, 5vw, 60px);
   color: #333;
-  font-weight: 600;
 }
+
 /* 🧱 Contact Card */
 .contact-card {
-  background: #fff;
-  border: 2px solid var(--primary);
+  background: #ffebee;
+  border-top: 4px solid var(--primary);
+  border-bottom: 4px solid var(--primary);
   padding: clamp(20px, 5vw, 50px);
   width: 100%;
   transition: all 0.3s ease;
   position: relative;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  max-width: 500px;
+  margin: 0 auto;
 }
+
 .contact-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(255, 0, 51, 0.25);
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateX(10px);
+  box-shadow: 0 4px 12px rgba(255, 0, 51, 0.15);
 }
+
 .contact-header {
-  border-bottom: 3px solid var(--primary);
-  margin-bottom: clamp(10px, 2vw, 20px);
-  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: clamp(10px, 2vw, 20px);
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd;
 }
+
 .contact-number {
   background: var(--primary);
   color: #fff;
-  font-weight: 700;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  padding: 6px 12px;
-  margin-bottom: 10px;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  padding: 4px 8px;
+  margin-bottom: 8px;
   display: inline-block;
 }
+
 .contact-title {
   color: var(--text);
-  font-size: clamp(1.1rem, 3vw, 1.8rem);
-  font-weight: 700;
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
   text-transform: uppercase;
+  margin: 0;
 }
+
 .contact-body p {
   color: #444;
-  font-size: clamp(0.9rem, 2.2vw, 1rem);
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
   line-height: 1.7;
   margin: 0;
 }
-/* 📱 Responsive Layouts */
-@media (max-width: 1024px) {
-  .contact-card {
-    padding: 30px;
-  }
+
+/* 📝 Contact Form */
+.form-container {
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffebee;
+  border: 2px solid var(--primary);
+  padding: clamp(30px, 5vw, 50px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.form-container:hover {
+  box-shadow: 0 8px 25px rgba(255, 0, 51, 0.2);
+  transform: translateY(-5px);
+}
+
+.form-content {
+  text-align: center;
+}
+
+.form-tagline {
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  margin-bottom: clamp(40px, 6vw, 80px);
+  color: #333;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 16px;
+  border: 2px solid #f36380;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: "Quicksand", sans-serif;
+  background-color: #ffebee;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-textarea {
+  resize: none;
+}
+
+.char-count {
+  align-self: flex-end;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.form-submit {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 30px;
+  border: none;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+  font-family: "Quicksand", sans-serif;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-submit:hover {
+  background: #cc0026;
+}
+
+.send-icon {
+  font-size: 1.3rem;
+  margin-left: 4px;
+}
+
+/* 📱 Responsive */
 @media (max-width: 768px) {
-  .contact-tagline {
-    font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+  .form-tagline {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    margin-bottom: 30px;
   }
-  .contact-card {
+  .form-input,
+  .form-textarea {
+    padding: 10px 14px;
+  }
+  .form-container {
     padding: 25px;
   }
 }
+
 @media (max-width: 480px) {
-  .contact-card {
-    padding: 20px;
+  .form-tagline {
+    font-size: 0.95rem;
   }
-  .contact-number {
-    font-size: 0.9rem;
+  .contact-form {
+    gap: 15px;
+  }
+  .form-container {
+    padding: 20px;
   }
 }

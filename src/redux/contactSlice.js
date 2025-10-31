@@ -2,10 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   hero: {
-    title: 'Contact'
+    title: 'Connect, Create & Grow Purposefully'
   },
   tagline: {
-    text: 'Get in Touch - Let\'s Build Something Amazing Together'
+    text: 'Collaborating to create meaningful impact through strategy, creativity, and connections that drive shared success.'
   },
   contactInfo: [
     {
@@ -15,14 +15,6 @@ const initialState = {
     {
       type: 'Phone',
       details: '+1 (123) 456-7890'
-    },
-    {
-      type: 'LinkedIn',
-      details: 'linkedin.com/in/yourprofile'
-    },
-    {
-      type: 'GitHub',
-      details: 'github.com/yourusername'
     }
   ]
 };
