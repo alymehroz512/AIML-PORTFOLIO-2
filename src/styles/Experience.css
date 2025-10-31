@@ -94,7 +94,7 @@
 
 /* 🧱 Experience Card */
 .experience-card {
-  background: #FFEBEE;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.7));
   border: 2px solid var(--primary);
   padding: clamp(20px, 5vw, 50px);
   width: 100%;
@@ -129,7 +129,6 @@
 .experience-title {
   color: var(--text);
   font-size: clamp(1.1rem, 3vw, 1.8rem);
-  font-weight: 700;
   text-transform: uppercase;
 }
 
