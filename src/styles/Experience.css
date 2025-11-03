@@ -5,6 +5,8 @@
   --exp-accent: #008080; /* Teal for experience section (matching About timeline/Expertise skills) */
   --text: #333;
   --accent: #f5f5f5;
+  --border-radius-sm: 6px; /* For small screens/mobile */
+  --border-radius-md: 8px; /* For large screens/desktop - rounded modern feel */
 }
 
 /* 🌌 Hero Section */
@@ -95,7 +97,7 @@
   font-weight: 600; /* Added for Roboto */
 }
 
-/* 🧱 Experience Card */
+/* 🧱 Experience Card - Now with responsive border-radius */
 .experience-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.7));
   border: 2px solid var(--exp-accent); /* Updated to teal accent */
@@ -104,6 +106,7 @@
   transition: all 0.3s ease;
   position: relative;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  border-radius: var(--border-radius-md); /* Added: Rounded corners for modern card look */
 }
 
 .experience-card:hover {
@@ -128,6 +131,7 @@
   margin-bottom: 10px;
   display: inline-block;
   font-weight: 500; /* Added for Roboto */
+  border-radius: 4px; /* Added: Small pill radius for badge polish */
 }
 
 .experience-title {
@@ -164,13 +168,14 @@
   font-weight: 400; /* Added for Roboto */
 }
 
-/* 📱 Responsive Layouts */
+/* 📱 Responsive Layouts - Updated for border-radius on small/large screens */
 @media (max-width: 1024px) {
   .experience-content {
     padding: 40px 30px;
   }
   .experience-card {
     padding: 30px;
+    border-radius: var(--border-radius-md); /* Keep 8px for mid-large screens */
   }
 }
 
@@ -183,6 +188,7 @@
   }
   .experience-card {
     padding: 25px;
+    border-radius: var(--border-radius-sm); /* Switch to 6px for tablets/smaller */
   }
   .experience-title {
     text-align: left;
@@ -198,6 +204,7 @@
   }
   .experience-card {
     padding: 20px;
+    border-radius: var(--border-radius-sm); /* 6px for small mobile */
   }
   .experience-number {
     font-size: 0.9rem;
@@ -207,5 +214,12 @@
   }
   .experience-body li {
     font-size: 0.9rem;
+  }
+}
+
+/* Large screens (above 1024px) - No extra media query needed; defaults to 8px */
+@media (min-width: 1025px) {
+  .experience-card {
+    border-radius: var(--border-radius-md); /* Explicit 8px for large desktops */
   }
 }

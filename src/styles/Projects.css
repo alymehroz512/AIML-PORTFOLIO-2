@@ -6,6 +6,8 @@
   --projects-accent: #008080; /* Teal for projects section (matching About timeline/Expertise skills/Experience) */
   --text: #333;
   --accent: #f5f5f5;
+  --border-radius-sm: 6px; /* For small screens/mobile */
+  --border-radius-md: 8px; /* For large screens/desktop - rounded modern feel */
 }
 
 /* 🌌 Hero Section */
@@ -153,12 +155,16 @@
   overflow: hidden;
   max-width: 1200px;
   margin: 0 auto;
+  border-top-left-radius: var(--border-radius-md); /* Top-left rounding for image */
+  border-top-right-radius: var(--border-radius-md); /* Top-right rounding for image */
 }
 
 .project-image {
   width: 100%;
   height: 100%;
   display: block;
+  border-top-left-radius: inherit; /* Inherit top-left from wrapper */
+  border-top-right-radius: inherit; /* Inherit top-right from wrapper */
 }
 
 .project-number {
@@ -171,6 +177,7 @@
   padding: 6px 10px;
   z-index: 2;
   font-weight: 500; /* Added for Roboto */
+  border-radius: 4px; /* Added: Small pill radius for badge polish */
 }
 
 .project-content {
@@ -181,6 +188,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom-left-radius: var(--border-radius-md); /* Bottom-left rounding for card */
+  border-bottom-right-radius: var(--border-radius-md); /* Bottom-right rounding for card */
 }
 
 .project-header {
@@ -205,6 +214,7 @@
   background: rgba(0, 128, 128, 0.1); /* Updated to teal background */
   padding: 5px 15px;
   font-weight: 500; /* Added for Roboto */
+  border-radius: 4px; /* Added: Small pill radius for year tag */
 }
 
 .project-description {
@@ -233,15 +243,20 @@
   padding: 10px 18px;
   font-size: 1rem;
   font-weight: 500; /* Added for Roboto */
+  border-radius: var(--border-radius-sm); /* Added: Subtle rounding for tech badges */
 }
 
-/* 📱 Responsive Layouts */
+/* 📱 Responsive Layouts - Updated for border-radius on small/large screens */
 @media (max-width: 1024px) {
   .project-image-wrapper {
     height: 450px;
+    border-top-left-radius: var(--border-radius-md); /* Keep top 8px for mid-large screens */
+    border-top-right-radius: var(--border-radius-md);
   }
   .project-content {
     padding: 25px;
+    border-bottom-left-radius: var(--border-radius-md); /* Keep bottom 8px for mid-large screens */
+    border-bottom-right-radius: var(--border-radius-md);
   }
 }
 
@@ -259,6 +274,8 @@
   }
   .project-image-wrapper {
     height: 400px;
+    border-top-left-radius: var(--border-radius-sm); /* Switch top to 6px for tablets/smaller */
+    border-top-right-radius: var(--border-radius-sm);
   }
   .project-header {
     flex-direction: column;
@@ -274,15 +291,22 @@
   }
   .project-content {
     padding: 20px;
+    border-bottom-left-radius: var(--border-radius-sm); /* Switch bottom to 6px for tablets/smaller */
+    border-bottom-right-radius: var(--border-radius-sm);
   }
   .project-techs {
     justify-content: flex-start;
+  }
+  .tech-tag {
+    border-radius: var(--border-radius-sm); /* 6px consistent on small */
   }
 }
 
 @media (max-width: 480px) {
   .project-image-wrapper {
     height: 350px;
+    border-top-left-radius: var(--border-radius-sm); /* 6px for small mobile */
+    border-top-right-radius: var(--border-radius-sm);
   }
   .project-number {
     font-size: 0.9rem;
@@ -292,6 +316,8 @@
   }
   .project-content {
     padding: 15px;
+    border-bottom-left-radius: var(--border-radius-sm); /* 6px for small mobile */
+    border-bottom-right-radius: var(--border-radius-sm);
   }
   .project-title {
     font-size: 1.3rem;
@@ -304,5 +330,21 @@
     font-size: 0.9rem;
     padding: 8px 16px;
     gap: 6px;
+    border-radius: var(--border-radius-sm);
+  }
+}
+
+/* Large screens (above 1024px) - No extra media query needed; defaults to 8px */
+@media (min-width: 1025px) {
+  .project-image-wrapper {
+    border-top-left-radius: var(--border-radius-md); /* Explicit top 8px for large desktops */
+    border-top-right-radius: var(--border-radius-md);
+  }
+  .project-content {
+    border-bottom-left-radius: var(--border-radius-md); /* Explicit bottom 8px for large desktops */
+    border-bottom-right-radius: var(--border-radius-md);
+  }
+  .tech-tag {
+    border-radius: var(--border-radius-sm); /* Consistent subtle on large too */
   }
 }
