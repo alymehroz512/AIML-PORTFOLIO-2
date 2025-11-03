@@ -5,6 +5,8 @@
   --timeline-accent: #008080; /* New teal scheme for timeline section */
   --text: #ffffff;
   --accent: #f5f5f5;
+  --border-radius-sm: 6px; /* For small screens/mobile */
+  --border-radius-md: 8px; /* For large screens/desktop - rounded modern feel */
 }
 
 .about-hero-section {
@@ -133,7 +135,7 @@
   justify-content: flex-end;
 }
 
-/* Timeline Dot with Numbers - Fully Responsive */
+/* Timeline Dot with Numbers - Fully Responsive, now rounded */
 .timeline-item::before {
   content: attr(data-number); /* display 1,2,3... */
   position: absolute;
@@ -149,7 +151,7 @@
   justify-content: center;
   transform: translateX(-50%);
   z-index: 2;
-  border-radius: 0; /* square */
+  border-radius: 50%; /* Updated to circular for modern dot feel */
   transition: all 0.3s ease;
 }
 
@@ -169,6 +171,7 @@
   max-width: 550px;
   transition: all 0.3s ease;
   border-bottom: 4px solid var(--timeline-accent); /* Updated to teal accent */
+  border-radius: var(--border-radius-md); /* Added: Rounded corners for card-like modern look */
 }
 
 .timeline-content:hover {
@@ -212,12 +215,15 @@
   border-radius: 2px;
 }
 
-/* 📱 Responsive Timeline */
+/* 📱 Responsive Timeline - Updated for border-radius on small/large screens */
 @media (max-width: 1024px) {
   .timeline-item::before {
     width: 40px;
     height: 40px;
     font-size: 18px;
+  }
+  .timeline-content {
+    border-radius: var(--border-radius-md); /* Keep 8px for mid-large screens */
   }
 }
 
@@ -241,6 +247,7 @@
     width: 99%;
     padding: 15px 20px;
     margin-top: 20px;
+    border-radius: var(--border-radius-sm); /* Switch to 6px for tablets/smaller */
   }
   .timeline-content h3 {
     margin-top: 30px;
@@ -251,6 +258,7 @@
     width: 35px;
     height: 35px;
     font-size: 16px;
+    border-radius: 50%; /* Consistent circular on small screens */
   }
   .timeline-item.right::before {
     left: auto;
@@ -275,9 +283,13 @@
     width: 30px;
     height: 30px;
     font-size: 14px;
+    border-radius: 50%;
   }
   .timeline-item.right::before {
     right: 15px;
+  }
+  .timeline-content {
+    border-radius: var(--border-radius-sm); /* 6px for small mobile */
   }
 }
 
@@ -285,6 +297,7 @@
  .timeline-content {
     max-width: 100%;
     width: 97%;
+    border-radius: var(--border-radius-sm);
   }
 }
 
@@ -292,6 +305,7 @@
  .timeline-content {
     max-width: 100%;
     width: 95%;
+    border-radius: var(--border-radius-sm);
   }
 }
 
@@ -300,6 +314,7 @@
     width: 28px;
     height: 28px;
     font-size: 12px;
+    border-radius: 50%;
   }
   .timeline-item.right::before {
     right: 10px;
@@ -307,5 +322,16 @@
   .timeline-content {
     max-width: 100%;
     width: 95%;
+    border-radius: var(--border-radius-sm);
+  }
+}
+
+/* Large screens (above 1024px) - No extra media query needed; defaults to 8px */
+@media (min-width: 1025px) {
+  .timeline-content {
+    border-radius: var(--border-radius-md); /* Explicit 8px for large desktops */
+  }
+  .timeline-item::before {
+    border-radius: 50%; /* Circular on large too */
   }
 }
