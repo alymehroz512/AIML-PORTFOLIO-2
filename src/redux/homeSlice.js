@@ -9,10 +9,8 @@ const initialState = {
     "Smart Systems Builder",
   ],
   tagline: "Empowering the Future with Smarter Systems",
-  descriptionFull:
-    "I’m an AI/ML Engineer passionate about building intelligent, human-centered systems. Using Python, TensorFlow, PyTorch, and advanced data science tools, I design and deploy machine learning models that tackle real-world challenges in predictive analytics, computer vision, and natural language processing. My focus is transforming raw data into actionable insights and integrating robust AI solutions into production-ready applications.",
   descriptionShort:
-    "AI/ML Engineer crafting intelligent systems with Python, TensorFlow & PyTorch to solve real-world problems in predictive analytics, computer vision, and NLP.",
+    "Artifical Intelligence & Machine Learning Engineer passionate about building intelligent systems using Python, TensorFlow, and PyTorch. Focused on solving real-world challenges in predictive analytics, computer vision, and natural language processing.",
 };
 
 const homeSlice = createSlice({

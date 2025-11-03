@@ -103,15 +103,6 @@
   font-weight: 400; /* Lighter body in Roboto */
 }
 
-/* ✅ Long vs Short text handling */
-.full-text {
-  display: block;
-}
-
-.short-text {
-  display: none;
-}
-
 /* 🎯 Buttons - Now with gradient */
 .hero-buttons {
   display: flex;
@@ -256,14 +247,6 @@
     width: 16px;
     height: 16px;
   }
-  .full-text {
-    display: none;
-  }
-  .short-text {
-    display: block;
-    max-width: 90%;
-    margin: 0 auto 30px;
-  }
 }
 
 @media (max-width: 375px) {
@@ -284,13 +267,6 @@
     width: 14px;
     height: 14px;
   }
-  .full-text {
-    display: none;
-  }
-  .short-text {
-    display: block;
-    max-width: 92%;
-  }
 }
 
 @media (max-width: 320px) {
@@ -310,12 +286,5 @@
   .icon {
     width: 12px;
     height: 12px;
-  }
-  .full-text {
-    display: none;
-  }
-  .short-text {
-    display: block;
-    max-width: 94%;
   }
 }

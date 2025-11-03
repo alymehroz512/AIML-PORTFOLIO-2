@@ -7,7 +7,7 @@ import { MdRemoveRedEye, MdDownload } from "react-icons/md";
 import "../styles/Home.css";
 
 const Home = () => {
-  const { name, titles, tagline, descriptionFull, descriptionShort } = useSelector(
+  const { name, titles, tagline, descriptionShort } = useSelector(
     (state) => state.home
   );
   return (
@@ -23,14 +23,13 @@ const Home = () => {
                 ...titles.flatMap((t) => [t, 1500]),
               ]}
               wrapper="span"
-              speed={50}
+              speed={30}
               repeat={Infinity}
               cursor={true}
             />
           </h1>
           <p className="hero-subheading">{tagline}</p>
-          <p className="hero-subheading-small full-text">{descriptionFull}</p>
-          <p className="hero-subheading-small short-text">{descriptionShort}</p>
+          <p className="hero-subheading-small">{descriptionShort}</p>
           <div className="hero-buttons">
             <NavLink to="/projects" className="hero-button">
               Explore Projects
