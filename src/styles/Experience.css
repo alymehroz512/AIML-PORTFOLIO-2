@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --accent: #f5f5f5;
+  --neon: #00BFFF; /* Deep Sky Blue for hero accents */
+  --exp-accent: #008080; /* Teal for experience section (matching About timeline/Expertise skills) */
   --text: #333;
-  --primary: #ff0033;
+  --accent: #f5f5f5;
 }
 
 /* 🌌 Hero Section */
@@ -14,7 +15,7 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
   position: relative;
   display: flex;
   align-items: center;
@@ -50,12 +51,13 @@
 }
 
 .experience-subheading {
-  color: var(--primary);
+  color: var(--neon); /* Updated to match home page accent */
   font-size: clamp(2.2rem, 6vw, 6rem);
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 2px;
   line-height: 1.1;
+  font-weight: 700; /* Added for Roboto boldness */
 }
 
 /* 💼 Experience Section */
@@ -66,14 +68,14 @@
   background-repeat: no-repeat;
   padding: clamp(60px, 8vw, 120px) clamp(4vw, 6vw, 10vw);
   position: relative;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
 }
 
 .experience-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95); /* Slightly more opaque white for better contrast with teal */
   z-index: 1;
 }
 
@@ -90,12 +92,13 @@
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   margin-bottom: clamp(30px, 5vw, 60px);
   color: #333;
+  font-weight: 600; /* Added for Roboto */
 }
 
 /* 🧱 Experience Card */
 .experience-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.7));
-  border: 2px solid var(--primary);
+  border: 2px solid var(--exp-accent); /* Updated to teal accent */
   padding: clamp(20px, 5vw, 50px);
   width: 100%;
   transition: all 0.3s ease;
@@ -105,11 +108,11 @@
 
 .experience-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(255, 0, 51, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.25); /* Updated to teal glow */
 }
 
 .experience-header {
-  border-bottom: 3px solid var(--primary);
+  border-bottom: 3px solid var(--exp-accent); /* Updated to teal accent */
   margin-bottom: clamp(10px, 2vw, 20px);
   padding-bottom: 10px;
   display: flex;
@@ -118,22 +121,24 @@
 }
 
 .experience-number {
-  background: var(--primary);
+  background: var(--exp-accent); /* Updated to teal accent */
   color: #fff;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   padding: 6px 12px;
   margin-bottom: 10px;
   display: inline-block;
+  font-weight: 500; /* Added for Roboto */
 }
 
 .experience-title {
   color: var(--text);
   font-size: clamp(1.1rem, 3vw, 1.8rem);
   text-transform: uppercase;
+  font-weight: 600; /* Added for Roboto */
 }
 
 .experience-title span {
-  color: var(--primary);
+  color: var(--exp-accent); /* Updated to teal accent */
 }
 
 .experience-duration {
@@ -141,6 +146,7 @@
   font-style: italic;
   margin-top: 8px;
   font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 400; /* Added for Roboto */
 }
 
 /* 📝 Bullet List */
@@ -155,6 +161,7 @@
   color: #444;
   font-size: clamp(0.9rem, 2.2vw, 1rem);
   line-height: 1.7;
+  font-weight: 400; /* Added for Roboto */
 }
 
 /* 📱 Responsive Layouts */
@@ -162,7 +169,6 @@
   .experience-content {
     padding: 40px 30px;
   }
-
   .experience-card {
     padding: 30px;
   }
@@ -172,19 +178,15 @@
   .experience-subheading {
     text-align: center;
   }
-
   .experience-content {
     align-items: center;
   }
-
   .experience-card {
     padding: 25px;
   }
-
   .experience-title {
     text-align: left;
   }
-
   .experience-tagline {
     font-size: clamp(1.2rem, 4.5vw, 1.8rem);
   }
@@ -194,19 +196,15 @@
   .experience-subheading {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
-
   .experience-card {
     padding: 20px;
   }
-
   .experience-number {
     font-size: 0.9rem;
   }
-
   .experience-duration {
     font-size: 0.85rem;
   }
-
   .experience-body li {
     font-size: 0.9rem;
   }
