@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
 :root {
-  --accent: #f5f5f5;
+  --neon: #00BFFF; /* Deep Sky Blue for hero accents */
+  --toolkit-accent: #008080; /* Teal for toolkit section (matching previous sections) */
   --text: #333;
-  --primary: #ff0033;
+  --accent: #f5f5f5;
 }
+
 /* 🌌 Hero Section */
 .toolkit-hero-section {
   background-image: url("../assets/ToolkitHero.jpg");
@@ -12,13 +15,14 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: clamp(4vh, 8vh, 10vh) clamp(4vw, 6vw, 10vw);
 }
+
 .toolkit-hero-section::before {
   content: "";
   position: absolute;
@@ -26,6 +30,7 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
+
 .toolkit-inner-container {
   width: 100%;
   position: relative;
@@ -33,6 +38,7 @@
   display: flex;
   justify-content: flex-start;
 }
+
 .toolkit-content {
   width: 100%;
   max-width: 900px;
@@ -43,20 +49,24 @@
   align-items: flex-start;
   justify-content: center;
 }
+
 .toolkit-subheading {
-  color: var(--primary);
+  color: var(--neon); /* Updated to match home page accent */
   font-size: clamp(2.2rem, 6vw, 6rem);
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 2px;
   line-height: 1.1;
+  font-weight: 700; /* Added for Roboto boldness */
 }
+
 /* 📱 Responsive Layouts */
 @media (max-width: 1024px) {
   .toolkit-content {
     padding: 40px 30px;
   }
 }
+
 @media (max-width: 768px) {
   .toolkit-subheading {
     text-align: center;
@@ -65,11 +75,13 @@
     align-items: center;
   }
 }
+
 @media (max-width: 480px) {
   .toolkit-subheading {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 }
+
 /* 🛠️ Toolkit Section */
 .toolkit-section {
   background-image: url("../assets/ToolkitSecond.jpg");
@@ -78,32 +90,37 @@
   background-repeat: no-repeat;
   padding: clamp(60px, 8vw, 120px) clamp(4vw, 6vw, 10vw);
   position: relative;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
 }
+
 .toolkit-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95); /* Slightly more opaque white for better contrast with teal */
   z-index: 1;
 }
+
 .toolkit-container {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 /* 🧠 Tagline */
 .toolkit-tagline {
   text-align: center;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   margin-bottom: clamp(30px, 5vw, 60px);
   color: #333;
+  font-weight: 600; /* Added for Roboto */
 }
+
 /* 🧱 Toolkit Item */
 .toolkit-item {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.7));
-  border-left: 4px solid var(--primary);
+  border-left: 4px solid var(--toolkit-accent); /* Updated to teal accent */
   padding: clamp(20px, 5vw, 50px);
   width: 100%;
   transition: all 0.3s ease;
@@ -111,11 +128,13 @@
   max-width: 900px;
   margin: 0 auto;
 }
+
 .toolkit-item:hover {
   background: rgba(255, 255, 255, 0.95);
   transform: translateX(10px);
-  box-shadow: 0 4px 12px rgba(255, 0, 51, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.15); /* Updated to teal shadow */
 }
+
 .toolkit-header {
   display: flex;
   flex-direction: column;
@@ -124,14 +143,17 @@
   padding-bottom: 10px;
   border-bottom: 1px dashed #ddd;
 }
+
 .toolkit-number {
-  background: var(--primary);
+  background: var(--toolkit-accent); /* Updated to teal accent */
   color: #fff;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
   padding: 4px 8px;
   margin-bottom: 8px;
   display: inline-block;
+  font-weight: 500; /* Added for Roboto */
 }
+
 .toolkit-title-container {
   display: flex;
   justify-content: space-between;
@@ -139,20 +161,25 @@
   width: 100%;
   margin-bottom: 10px;
 }
+
 .toolkit-title {
   color: var(--text);
   font-size: clamp(1.2rem, 3.5vw, 2rem);
   text-transform: uppercase;
   margin: 0;
+  font-weight: 600; /* Added for Roboto */
 }
+
 .toolkit-duration {
-  color: var(--primary);
+  color: var(--toolkit-accent); /* Updated to teal accent */
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  background: rgba(255, 0, 51, 0.1);
+  background: rgba(0, 128, 128, 0.1); /* Updated to teal background */
   padding: 4px 16px;
   min-width: 150px;
   text-align: center;
+  font-weight: 500; /* Added for Roboto */
 }
+
 /* Progress Bar */
 .progress-container {
   width: 100%;
@@ -161,24 +188,29 @@
   overflow: hidden;
   margin-bottom: 15px;
 }
+
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary), #cc0026);
+  background: linear-gradient(90deg, var(--toolkit-accent), #006666); /* Updated to teal gradient */
   transition: width 1.5s ease-in-out;
-  box-shadow: 0 2px 4px rgba(255, 0, 51, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 128, 128, 0.3); /* Updated to teal shadow */
 }
+
 .toolkit-body p {
   color: #444;
   font-size: clamp(0.95rem, 2.2vw, 1.05rem);
   line-height: 1.8;
   margin: 0;
+  font-weight: 400; /* Added for Roboto */
 }
+
 /* 📱 Responsive Layouts */
 @media (max-width: 1024px) {
   .toolkit-item {
     padding: 30px;
   }
 }
+
 @media (max-width: 768px) {
   .toolkit-tagline {
     font-size: clamp(1.2rem, 4.5vw, 1.8rem);
@@ -196,6 +228,7 @@
     align-self: flex-end;
   }
 }
+
 @media (max-width: 480px) {
   .toolkit-item {
     padding: 20px;
