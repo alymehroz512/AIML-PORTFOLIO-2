@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Footer.css";
 import Logo from "../assets/Logo.svg";
-import FooterBg from "../assets/Footer.jpg";
+import FooterBg from "../assets/FooterBackground.jpg";
 import { MdCopyright } from "react-icons/md";
 
 const Footer = () => {
@@ -41,7 +41,7 @@ const Footer = () => {
 
                 {/* NavLinks dynamically loaded from Redux */}
                 <div className="footer-nav-container">
-                  <Nav className="footer-nav">
+                  <Nav className="footer-nav mt-2">
                     {links.map((link, index) => (
                       <Nav.Link
                         as={NavLink}
