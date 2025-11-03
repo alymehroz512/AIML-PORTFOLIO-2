@@ -89,7 +89,7 @@ const Footer = () => {
                     {year}{" "}
                     <span
                       style={{
-                        color: "#FF0033",
+                        color: "#00BFFF",
                         textTransform: "uppercase",
                         fontSize: "20px",
                       }}

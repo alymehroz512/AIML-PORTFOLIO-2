@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+:root {
+  --border-radius-sm: 6px; /* For small screens/mobile */
+  --border-radius-md: 8px; /* For large screens/desktop - rounded modern feel */
+}
 
 .footer {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Switched to Roboto for consistency with navbar */
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -63,6 +68,7 @@
   width: 100%;
   flex-wrap: wrap;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: var(--border-radius-md); /* Added: Rounded corners for modern card look */
 }
 
 .footer-nav {
@@ -82,11 +88,12 @@
   text-decoration: none;
   position: relative;
   cursor: none;
+  font-weight: 500; /* Matches navbar */
 }
 
 .footer-link:hover,
 .footer-link.active {
-  color: #ff0033 !important;
+  color: #00BFFF !important; /* Updated to match navbar --neon blue */
 }
 
 /* COPYRIGHT SECTION - left aligned and larger */
@@ -101,34 +108,29 @@
 /* =============================
    RESPONSIVE STYLES
 ============================= */
-
 @media (max-width: 991px) {
   .footer-content {
     padding: 40px 0 25px 0;
   }
-
   .logo-section {
     align-items: flex-start;
     text-align: left;
   }
-
   .footer-nav-container {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     padding: 20px;
+    border-radius: var(--border-radius-md); /* Keep 8px for mid-large screens */
   }
-
   .footer-nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
-
   .footer-link {
     font-size: 17px;
   }
-
   .footer-bottom {
     font-size: 17px;
     text-align: left;
@@ -136,28 +138,30 @@
   }
 }
 
+@media (max-width: 768px) {
+  .footer-nav-container {
+    border-radius: var(--border-radius-sm); /* Switch to 6px for tablets/smaller */
+  }
+}
+
 @media (max-width: 576px) {
   .footer-content {
     padding: 60px 15px 25px 15px;
   }
-
   .footer-logo {
     height: 30px;
   }
-
   .footer-desc {
     font-size: 14px;
     text-transform: none;
   }
-
   .footer-nav-container {
     padding: 15px;
+    border-radius: var(--border-radius-sm); /* 6px for small mobile */
   }
-
   .footer-link {
     font-size: 15px;
   }
-
   .footer-bottom {
     font-size: 16px;
     text-align: left;
@@ -169,12 +173,13 @@
     max-width: 1300px;
     margin: 0 auto;
   }
-
   .footer-link {
     font-size: 20px;
   }
-
   .footer-bottom {
     font-size: 20px;
+  }
+  .footer-nav-container {
+    border-radius: var(--border-radius-md); /* Explicit 8px for large desktops */
   }
 }

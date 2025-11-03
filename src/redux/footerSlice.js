@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   year: new Date().getFullYear(),
   author: "Syed Imran Saeed Rizvi",
-  slogan: "Code | Learn | Evolve — Creating Tomorrow with the Power of AI",
+  slogan: "Code — Learn — Evolve — Creating Tomorrow with the Power of AI",
   links: [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
