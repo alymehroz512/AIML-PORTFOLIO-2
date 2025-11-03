@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
 :root {
-  --accent: #f5f5f5;
+  --neon: #00BFFF; /* Deep Sky Blue for hero accents */
+  --timeline-accent: #008080; /* New teal scheme for timeline section */
   --text: #ffffff;
-  --primary: #FF0033;
+  --accent: #f5f5f5;
 }
-/* 🌌 Hero Section */
+
 .about-hero-section {
   background-image: url("../assets/AboutHero.jpg");
   background-size: cover;
@@ -12,13 +14,14 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: clamp(4vh, 8vh, 10vh) clamp(4vw, 6vw, 10vw);
 }
+
 .about-hero-section::before {
   content: "";
   position: absolute;
@@ -26,6 +29,7 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
+
 .about-inner-container {
   width: 100%;
   position: relative;
@@ -33,6 +37,7 @@
   display: flex;
   justify-content: flex-start;
 }
+
 .about-content {
   width: 100%;
   max-width: 900px;
@@ -43,20 +48,24 @@
   align-items: flex-start;
   justify-content: center;
 }
+
 .about-subheading {
-  color: var(--primary);
+  color: var(--neon); /* Updated to match home page accent */
   font-size: clamp(2.2rem, 6vw, 6rem);
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 2px;
   line-height: 1.1;
+  font-weight: 700; /* Added for Roboto boldness */
 }
+
 /* 📱 Responsive Layouts */
 @media (max-width: 1024px) {
   .about-content {
     padding: 40px 30px;
   }
 }
+
 @media (max-width: 768px) {
   .about-subheading {
     text-align: center;
@@ -65,11 +74,13 @@
     align-items: center;
   }
 }
+
 @media (max-width: 480px) {
   .about-subheading {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 }
+
 /* 🕒 Timeline / Milestones Section */
 .about-timeline-section {
   background-image: url("../assets/AboutSecond.jpg");
@@ -77,16 +88,18 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: clamp(60px, 8vw, 120px) clamp(4vw, 6vw, 10vw);
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
   position: relative;
 }
+
 .about-timeline-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95); /* Slightly more opaque white for better contrast with teal */
   z-index: 1;
 }
+
 .timeline-heading {
   text-align: center;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -94,13 +107,16 @@
   color: #333;
   position: relative;
   z-index: 2;
+  font-weight: 600; /* Added for Roboto */
 }
+
 .timeline {
   position: relative;
   margin: 0 auto;
   padding: 0;
   z-index: 2;
 }
+
 /* Timeline Item */
 .timeline-item {
   position: relative;
@@ -108,12 +124,15 @@
   display: flex;
   align-items: flex-start;
 }
+
 .timeline-item.left {
   justify-content: flex-start;
 }
+
 .timeline-item.right {
   justify-content: flex-end;
 }
+
 /* Timeline Dot with Numbers - Fully Responsive */
 .timeline-item::before {
   content: attr(data-number); /* display 1,2,3... */
@@ -122,7 +141,7 @@
   left: 50%;
   width: 50px; /* default large size */
   height: 50px;
-  background: var(--primary);
+  background: var(--timeline-accent); /* Updated to teal accent */
   color: #ffffff;
   font-size: 20px;
   display: flex;
@@ -133,42 +152,53 @@
   border-radius: 0; /* square */
   transition: all 0.3s ease;
 }
+
 /* Timeline content alignment */
 .timeline-item.left .timeline-content {
   text-align: left;
 }
+
 .timeline-item.right .timeline-content {
   text-align: right;
 }
+
 .timeline-content {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.7));
   padding: 20px 30px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   max-width: 550px;
   transition: all 0.3s ease;
-  border: 2px solid var(--primary);
+  border-bottom: 2px solid var(--timeline-accent); /* Updated to teal accent */
 }
+
 .timeline-content:hover {
-   box-shadow: 0 10px 20px rgba(255, 0, 51, 0.25);
+   box-shadow: 0 10px 20px rgba(0, 128, 128, 0.25); /* Updated to teal glow */
   transform: translateY(-6px);
 }
+
 /* Headings */
 .timeline-content h3 {
   font-size: 34px;
-  color: var(--primary);
+  color: var(--timeline-accent); /* Updated to teal accent */
   margin-top: 10px;
   margin-bottom: 10px;
+  font-weight: 700; /* Added for Roboto */
 }
+
 .timeline-content h4 {
   font-size: 20px;
   margin-bottom: 10px;
   color: #222;
+  font-weight: 600; /* Added for Roboto */
 }
+
 .timeline-content p {
   font-size: 16px;
   line-height: 1.5;
   color: #555;
+  font-weight: 400; /* Added for Roboto */
 }
+
 /* Vertical line in center */
 .timeline::before {
   content: "";
@@ -177,10 +207,11 @@
   left: 50%;
   width: 4px;
   height: 101%;
-  background: var(--primary);
+  background: var(--timeline-accent); /* Updated to teal accent */
   transform: translateX(-50%);
   border-radius: 2px;
 }
+
 /* 📱 Responsive Timeline */
 @media (max-width: 1024px) {
   .timeline-item::before {
@@ -189,6 +220,7 @@
     font-size: 18px;
   }
 }
+
 @media (max-width: 768px) {
  .timeline-heading {
     font-size: clamp(1.2rem, 4.5vw, 1.8rem);
@@ -225,6 +257,7 @@
     right: 20px;
   }
 }
+
 @media (max-width: 480px) {
   .timeline-heading {
     margin-bottom: 40px;
@@ -247,18 +280,21 @@
     right: 15px;
   }
 }
+
 @media (max-width: 425px) {
  .timeline-content {
     max-width: 100%;
     width: 97%;
   }
 }
+
 @media (max-width: 375px) {
  .timeline-content {
     max-width: 100%;
     width: 95%;
   }
 }
+
 @media (max-width: 320px) {
   .timeline-item::before {
     width: 28px;
