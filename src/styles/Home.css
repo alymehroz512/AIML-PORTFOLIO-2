@@ -4,6 +4,8 @@
   --neon: #00BFFF; /* Deep Sky Blue for tech harmony */
   --text: #ffffff;
   --gradient: linear-gradient(135deg, var(--neon), #1E3A8A); /* Blue gradient for buttons */
+  --border-radius-sm: 6px; /* For small screens/mobile */
+  --border-radius-md: 8px; /* For large screens/desktop - recommended update for softer feel */
 }
 
 /* 🌌 Hero Section */
@@ -103,7 +105,7 @@
   font-weight: 400; /* Lighter body in Roboto */
 }
 
-/* 🎯 Buttons - Now with gradient */
+/* 🎯 Buttons - Now with gradient and responsive border-radius */
 .hero-buttons {
   display: flex;
   justify-content: center; /* Center buttons */
@@ -126,8 +128,9 @@
   gap: 0.5rem;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  font-weight: 600;
   overflow: hidden;
+  cursor: none;
+  border-radius: var(--border-radius-md); /* Updated to use CSS var for large screens (8px default) */
   font-family: inherit; /* Inherit Roboto for buttons */
 }
 
@@ -176,7 +179,7 @@
   transform: translateX(6px); /* More slide */
 }
 
-/* 📱 Responsive Scaling */
+/* 📱 Responsive Scaling - Updated for border-radius on small/large screens */
 @media (max-width: 1024px) {
   .hero-heading {
     font-size: 60px;
@@ -192,6 +195,7 @@
   .hero-button {
     font-size: 15px;
     padding: 14px 28px;
+    border-radius: var(--border-radius-md); /* Keep 8px for mid-large screens */
   }
 }
 
@@ -214,6 +218,7 @@
   .hero-button {
     font-size: 14px;
     padding: 12px 24px;
+    border-radius: var(--border-radius-sm); /* Switch to 6px for tablets/smaller */
   }
   .icon {
     width: 18px;
@@ -242,6 +247,7 @@
     padding: 12px 20px;
     width: 100%;
     max-width: 250px;
+    border-radius: var(--border-radius-sm); /* 6px for mobile - tighter for touch targets */
   }
   .icon {
     width: 16px;
@@ -262,6 +268,7 @@
   .hero-button {
     font-size: 12px;
     padding: 10px 18px;
+    border-radius: var(--border-radius-sm); /* Consistent 6px on very small */
   }
   .icon {
     width: 14px;
@@ -282,9 +289,17 @@
   .hero-button {
     font-size: 11px;
     padding: 8px 16px;
+    border-radius: var(--border-radius-sm); /* 6px for tiniest screens */
   }
   .icon {
     width: 12px;
     height: 12px;
+  }
+}
+
+/* Large screens (above 1024px) - No extra media query needed; defaults to 8px */
+@media (min-width: 1025px) {
+  .hero-button {
+    border-radius: var(--border-radius-md); /* Explicit 8px for large desktops */
   }
 }
