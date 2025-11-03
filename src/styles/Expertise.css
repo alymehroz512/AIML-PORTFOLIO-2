@@ -1,20 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --accent: #f5f5f5;
+  --neon: #00BFFF; /* Deep Sky Blue for hero accents */
+  --skills-accent: #008080; /* Updated to teal (same as About timeline section) */
   --text: #333;
-  --primary: #ff0033;
+  --accent: #f5f5f5;
 }
 
 /* 🌌 Hero Section */
 .expertise-hero-section {
-  background-image: url("../assets/ExpertiseHero.jpeg");
+  background-image: url("../assets/ExpertiseHero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
   position: relative;
   display: flex;
   align-items: center;
@@ -50,12 +51,13 @@
 }
 
 .expertise-subheading {
-  color: var(--primary);
+  color: var(--neon); /* Updated to match home page accent */
   font-size: clamp(2.2rem, 6vw, 6rem);
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 2px;
   line-height: 1.1;
+  font-weight: 700; /* Added for Roboto boldness */
 }
 
 /* 🛠️ Skills Section */
@@ -65,7 +67,7 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: clamp(60px, 8vw, 120px) clamp(4vw, 6vw, 10vw);
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
   position: relative;
 }
 
@@ -73,7 +75,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95); /* Slightly more opaque white for better contrast with teal */
   z-index: 1;
 }
 
@@ -90,6 +92,7 @@
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   margin-bottom: clamp(40px, 6vw, 80px);
   color: #333;
+  font-weight: 600; /* Added for Roboto */
 }
 
 /* Headings & Subtitles */
@@ -98,6 +101,7 @@
   font-size: clamp(1.5rem, 4vw, 2.4rem);
   margin-bottom: clamp(8px, 2vw, 12px);
   color: #333;
+  font-weight: 600; /* Added for Roboto */
 }
 
 .skills-subtitle {
@@ -106,6 +110,7 @@
   color: #555;
   margin-bottom: clamp(25px, 5vw, 50px);
   font-style: italic;
+  font-weight: 400; /* Added for Roboto */
 }
 
 /* 🔳 Skills Grid */
@@ -120,7 +125,7 @@
 .skill-card {
   position: relative;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.7));
-  border: 2px solid var(--primary);
+  border: 2px solid var(--skills-accent); /* Updated to teal accent */
   padding: clamp(20px, 4vw, 40px);
   text-align: center;
   transition: all 0.3s ease;
@@ -134,14 +139,14 @@
 
 .skill-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(255, 0, 51, 0.25);
+  box-shadow: 0 10px 20px rgba(0, 128, 128, 0.25); /* Updated to teal glow */
 }
 
 /* ♦️ Diamond Icon */
 .diamond {
   width: clamp(40px, 8vw, 70px);
   height: clamp(40px, 8vw, 70px);
-  background: var(--primary);
+  background: var(--skills-accent); /* Updated to teal accent */
   /* transform: rotate(45deg); */
   display: flex;
   align-items: center;
@@ -160,18 +165,19 @@
   position: absolute;
   top: 10px;
   left: 12px;
-  background-color: var(--primary);
+  background-color: var(--skills-accent); /* Updated to teal accent */
   color: #fff;
   font-size: clamp(0.8rem, 1.8vw, 1rem);
   padding: 5px 10px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Updated to Roboto */
+  font-weight: 500; /* Added for Roboto */
 }
 
 /* 📝 Card Text */
 .skill-card h4 {
   font-size: clamp(1rem, 2.2vw, 1.4rem);
   color: #333;
-  font-weight: 600;
+  font-weight: 600; /* Added for Roboto */
   margin-bottom: 10px;
 }
 
@@ -181,6 +187,7 @@
   line-height: 1.6;
   margin: 0;
   text-align: center;
+  font-weight: 400; /* Added for Roboto */
 }
 
 /* 📱 Responsive Tweaks */
@@ -196,11 +203,9 @@
     align-items: center;
     text-align: center;
   }
-
   .skills-main-heading {
     text-align: center;
   }
-
   .diamond {
     width: 60px;
     height: 60px;
@@ -208,31 +213,24 @@
 }
 
 @media (max-width: 480px) {
-
   .expertise-subheading {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
-
   .skills-intro-line {
     font-size: clamp(1.2rem, 5vw, 1.6rem);
   }
-
   .skill-card {
     padding: 20px;
   }
-
   .skill-card h4 {
     font-size: 1rem;
   }
-
   .skill-card p {
     font-size: 0.9rem;
   }
-
   .skills-main-heading {
     font-size: 1.4rem;
   }
-
   .skills-subtitle {
     font-size: 0.9rem;
   }

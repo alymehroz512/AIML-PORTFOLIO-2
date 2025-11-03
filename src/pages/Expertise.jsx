@@ -13,7 +13,6 @@ const Expertise = () => {
     secondarySkillsSection,
     skillsIntroLine,
   } = useSelector((state) => state.expertise);
-
   return (
     <>
       {/* 🌌 Hero Section */}
@@ -24,17 +23,14 @@ const Expertise = () => {
           </Col>
         </div>
       </Container>
-
       {/* 🛠️ Skills Section */}
       <Container fluid className="expertise-skills-section">
         <Container className="skills-container">
           {/* 🧠 Intro Line */}
           <h2 className="skills-intro-line">{skillsIntroLine}</h2>
-
           {/* 🌟 Core Skills */}
           <h2 className="skills-main-heading">{coreSkillsSection.heading}</h2>
           <p className="skills-subtitle">{coreSkillsSection.subtitle}</p>
-
           <Row className="skills-grid">
             {coreSkills.map((skill, index) => {
               const IconComponent = MdIcons[skill.icon];
@@ -62,13 +58,11 @@ const Expertise = () => {
               );
             })}
           </Row>
-
           {/* 💎 Secondary Skills */}
           <h2 className="skills-main-heading">
             {secondarySkillsSection.heading}
           </h2>
           <p className="skills-subtitle">{secondarySkillsSection.subtitle}</p>
-
           <Row className="skills-grid">
             {secondarySkills.map((skill, index) => {
               const IconComponent = MdIcons[skill.icon];

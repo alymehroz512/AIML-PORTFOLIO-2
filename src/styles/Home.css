@@ -134,7 +134,6 @@
   cursor: pointer;
   gap: 0.5rem;
   text-decoration: none;
-  border-radius: 50px; /* Rounded for modern look */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   font-weight: 600;
   overflow: hidden;

@@ -4,11 +4,9 @@ const initialState = {
   hero: {
     title: "Expertise in AI & Machine Learning",
   },
-
   // 🆕 Added this section for the top line in Skills Section
   skillsIntroLine:
     "Empowering data with intelligence crafting AI solutions that merge innovation, performance, and human centered design",
-
   coreSkillsSection: {
     heading: "Core Experties",
     subtitle: "10 years professional AI and ML developer",
@@ -17,7 +15,6 @@ const initialState = {
     heading: "Supporting Experties",
     subtitle: "Additional expertise across AI ecosystem",
   },
-
   coreSkills: [
     {
       icon: "MdAnalytics",
@@ -92,7 +89,6 @@ const initialState = {
         "Building ARIMA, Prophet, and LSTM models for temporal predictions. Experienced in demand, sales, and sensor forecasting use cases.",
     },
   ],
-
   secondarySkills: [
     {
       icon: "MdDataObject",
