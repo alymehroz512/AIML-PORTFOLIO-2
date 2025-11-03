@@ -4,10 +4,10 @@
   height: 20px;
   position: fixed;
   pointer-events: none;
-  background: #ff0033;
+  background: #00BFFF; /* Updated to Deep Sky Blue to match home page --neon */
   transform: rotate(45deg);
   border-radius: 4px;
-  box-shadow: 0 0 15px rgba(255, 0, 51, 0.8), 0 0 30px rgba(255, 0, 51, 0.5);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.8), 0 0 30px rgba(0, 191, 255, 0.5); /* Updated shadows to blue */
   z-index: 9999;
   transition: transform 0.15s ease, box-shadow 0.3s ease;
 }
@@ -15,7 +15,7 @@
 /* Click shrink effect */
 .cursor-shape.clicked {
   transform: rotate(45deg) scale(0.8);
-  box-shadow: 0 0 20px rgba(255, 0, 51, 0.9);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.9); /* Updated click shadow to blue */
 }
 
 /* Smoke trail container */
@@ -36,8 +36,8 @@
   height: 2px;
   background: linear-gradient(
     90deg,
-    rgba(255, 0, 51, 0.8) 0%,
-    rgba(255, 0, 51, 0.2) 60%,
+    rgba(0, 191, 255, 0.8) 0%, /* Updated to blue gradient */
+    rgba(0, 191, 255, 0.2) 60%,
     transparent 100%
   );
   border-radius: 2px;
