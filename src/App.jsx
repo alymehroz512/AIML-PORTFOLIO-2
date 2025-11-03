@@ -9,7 +9,8 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import CustomCursor from './components/CustomCursor';
 import DevTools from './pages/Toolkit';
-import Contact from './pages/Contact'
+import Contact from './pages/Contact';
+import Footer from './components/Footer'; // Import the Footer component
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -35,6 +36,7 @@ function AppRoutes() {
         <Route path="/devtools" element={<DevTools />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer /> {/* Footer displayed on every page */}
     </>
   );
 }

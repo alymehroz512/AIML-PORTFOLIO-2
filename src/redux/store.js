@@ -6,17 +6,19 @@ import expertiseReducer from "./expertiseSlice";
 import experienceReducer from "./experienceSlice";
 import toolkitReducer from "./toolkitSlice";
 import contactReducer from "./contactSlice";
-import projectsReducer from "./projectsSlice"; 
+import projectsReducer from "./projectsSlice";
+import footerReducer from "./footerSlice"; 
 
 export const store = configureStore({
   reducer: {
     nav: navReducer,
     home: homeReducer,
     about: aboutReducer,
-    expertise: expertiseReducer,  
+    expertise: expertiseReducer,
     experience: experienceReducer,
     toolkit: toolkitReducer,
     contact: contactReducer,
-    projects: projectsReducer, 
+    projects: projectsReducer,
+    footer: footerReducer, 
   },
 });
