@@ -10,12 +10,11 @@ const Home = () => {
   const { name, titles, tagline, descriptionFull, descriptionShort } = useSelector(
     (state) => state.home
   );
-
   return (
     <Container fluid className="hero-section">
-      <div className="black-overlay"></div> {/* 🖤 semi-transparent black wrapper */}
+      <div className="black-overlay"></div> {/* 🖤 semi-transparent black wrapper, lightened */}
       <div className="inner-container">
-        <Col md={12} className="hero-content mt-lg-5 mt-sm-0">
+        <Col md={12} className="hero-content mt-lg-5 mt-sm-0 text-center">
           <h1 className="hero-heading">
             <TypeAnimation
               sequence={[
@@ -29,18 +28,14 @@ const Home = () => {
               cursor={true}
             />
           </h1>
-
           <p className="hero-subheading">{tagline}</p>
-
           <p className="hero-subheading-small full-text">{descriptionFull}</p>
           <p className="hero-subheading-small short-text">{descriptionShort}</p>
-
           <div className="hero-buttons">
             <NavLink to="/projects" className="hero-button">
               Explore Projects
               <MdRemoveRedEye className="icon" />
             </NavLink>
-
             <a href="/assets/AliMehroz_CV.pdf" download className="hero-button">
               Download CV
               <MdDownload className="icon" />

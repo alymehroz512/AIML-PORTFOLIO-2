@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --neon: #FF0033;
+  --neon: #00BFFF; /* Deep Sky Blue for tech harmony */
   --text: #ffffff;
+  --gradient: linear-gradient(135deg, var(--neon), #1E3A8A); /* Blue gradient for buttons */
 }
 
 /* 🌌 Hero Section */
@@ -13,75 +14,93 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif; /* Switched to Roboto for clean, modern readability */
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* Centered overall */
   padding: 8vh 0;
   overflow: hidden;
 }
 
-/* 🖤 Black overlay (rgba wrapper) */
+/* 🖤 Black overlay (lightened for better text visibility) */
 .black-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4); /* Lightened from 0.5 */
   z-index: 1;
 }
 
-/* 🧠 Inner Container */
+/* 🧠 Inner Container - Now centered */
 .inner-container {
   width: 100%;
+  max-width: 1200px; /* Added max-width for balance */
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center; /* Center align */
   align-items: center;
-  padding-left: 6vw;
+  padding: 0 2rem; /* Symmetric padding */
 }
 
-/* 🧠 Hero Content */
+/* 🧠 Hero Content - Centered text */
 .hero-content {
   width: 100%;
   max-width: 900px;
-  text-align: left;
+  text-align: center; /* Centered for new design */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* Center items */
   justify-content: center;
+  animation: fadeIn 1s ease-out; /* Subtle entrance animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 🎯 Hero Heading */
 .hero-heading {
   color: var(--neon);
-  font-size: 65px;
+  font-size: 72px; /* Slightly larger for impact */
   text-transform: uppercase;
   margin-bottom: 20px;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px; /* Increased spacing */
   line-height: 1.1;
   white-space: nowrap;
-  min-height: 80px;
+  min-height: 90px;
+  font-weight: 700; /* Bold for headings in Roboto */
 }
 
 /* ✨ Subheadings */
 .hero-subheading {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 32px; /* Bumped up */
   margin-bottom: 25px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .hero-subheading-small {
   color: #ffffff;
-  font-size: 20px;
-  margin-bottom: 35px;
-  line-height: 1.6;
-  text-align: left;
+  font-size: 18px; /* Refined */
+  margin-bottom: 40px;
+  line-height: 1.7;
+  max-width: 800px; /* Limit width for readability */
+  text-align: center; /* Ensure center */
+  font-weight: 400; /* Lighter body in Roboto */
 }
 
 /* ✅ Long vs Short text handling */
@@ -93,10 +112,10 @@
   display: none;
 }
 
-/* 🎯 Buttons */
+/* 🎯 Buttons - Now with gradient */
 .hero-buttons {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center; /* Center buttons */
   gap: 1.5rem;
   flex-wrap: wrap;
 }
@@ -106,61 +125,52 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 28px;
+  padding: 16px 32px; /* Wider padding */
   font-size: 16px;
   text-transform: uppercase;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.55);
+  background: var(--gradient); /* Blue gradient bg */
   border: none;
-  cursor: none;
+  cursor: pointer;
   gap: 0.5rem;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-}
-
-.hero-button::before,
-.hero-button::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  transition: width 0.22s ease, height 0.22s ease;
+  border-radius: 50px; /* Rounded for modern look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-weight: 600;
+  overflow: hidden;
+  font-family: inherit; /* Inherit Roboto for buttons */
 }
 
 .hero-button::before {
-  top: -3px;
-  right: -3px;
-  border-top: 2px solid var(--neon);
-  border-right: 2px solid var(--neon);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.hero-button:hover::before {
+  left: 100%;
 }
 
 .hero-button::after {
-  bottom: -3px;
-  left: -3px;
-  border-bottom: 2px solid var(--neon);
-  border-left: 2px solid var(--neon);
+  content: none; /* Simplified borders for gradient style */
 }
 
 .hero-button:hover,
 .hero-button:focus-visible {
-  background: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 6px 16px rgba(255, 0, 51, 0.25),
-              0 1px 6px rgba(0, 0, 0, 0.3);
-  transform: translateY(-3px);
-}
-
-.hero-button:hover::before,
-.hero-button:hover::after,
-.hero-button:focus-visible::before,
-.hero-button:focus-visible::after {
-  width: 102.5%;
-  height: 110%;
+  transform: translateY(-5px); /* More lift */
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.3), /* Enhanced blue glow */
+              0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero-button:active {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 0, 51, 0.2),
-              0 1px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 191, 255, 0.25),
+              0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 🧠 MD Icons */
@@ -173,46 +183,47 @@
 
 .hero-button:hover .icon,
 .hero-button:focus-visible .icon {
-  transform: translateX(4px);
+  transform: translateX(6px); /* More slide */
 }
 
 /* 📱 Responsive Scaling */
 @media (max-width: 1024px) {
   .hero-heading {
-    font-size: 55px;
-    min-height: 70px;
+    font-size: 60px;
+    min-height: 75px;
+    letter-spacing: 1.5px;
   }
   .hero-subheading {
-    font-size: 24px;
+    font-size: 26px;
   }
   .hero-subheading-small {
     font-size: 16px;
   }
   .hero-button {
     font-size: 15px;
-    padding: 14px 24px;
+    padding: 14px 28px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-heading {
-    font-size: 42px;
+    font-size: 48px;
     white-space: normal;
-    margin-top: 50px;
+    letter-spacing: 1px;
+    margin-top: 40px;
   }
   .hero-subheading {
-    font-size: 18px;
+    font-size: 22px;
   }
   .hero-subheading-small {
     font-size: 15px;
-    text-align: left;
   }
-  .hero-content {
-    /* padding: 40px 20px; */
+  .inner-container {
+    padding: 0 1rem;
   }
   .hero-button {
     font-size: 14px;
-    padding: 12px 20px;
+    padding: 12px 24px;
   }
   .icon {
     width: 18px;
@@ -222,60 +233,58 @@
 
 @media (max-width: 425px) {
   .hero-heading {
-    font-size: 32px;
+    font-size: 36px;
   }
   .hero-subheading {
-    font-size: 15px;
+    font-size: 18px;
   }
   .hero-subheading-small {
     font-size: 14px;
-    text-align: left;
     line-height: 1.5;
-  }
-  .hero-content {
-    /* padding: 28px 16px; */
   }
   .hero-buttons {
     gap: 1rem;
+    flex-direction: column; /* Stack on small screens */
+    align-items: center;
   }
   .hero-button {
     font-size: 13px;
-    padding: 10px 16px;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 250px;
   }
   .icon {
     width: 16px;
     height: 16px;
   }
-
   .full-text {
     display: none;
   }
   .short-text {
     display: block;
     max-width: 90%;
-    margin: 0 0 30px;
+    margin: 0 auto 30px;
   }
 }
 
 @media (max-width: 375px) {
   .hero-heading {
-    font-size: 28px;
+    font-size: 32px;
   }
   .hero-subheading {
-    font-size: 14px;
+    font-size: 16px;
   }
   .hero-subheading-small {
     font-size: 13px;
   }
   .hero-button {
     font-size: 12px;
-    padding: 8px 14px;
+    padding: 10px 18px;
   }
   .icon {
     width: 14px;
     height: 14px;
   }
-
   .full-text {
     display: none;
   }
@@ -287,23 +296,22 @@
 
 @media (max-width: 320px) {
   .hero-heading {
-    font-size: 24px;
+    font-size: 28px;
   }
   .hero-subheading {
-    font-size: 13px;
+    font-size: 14px;
   }
   .hero-subheading-small {
     font-size: 12px;
   }
   .hero-button {
     font-size: 11px;
-    padding: 6px 12px;
+    padding: 8px 16px;
   }
   .icon {
     width: 12px;
     height: 12px;
   }
-
   .full-text {
     display: none;
   }

@@ -36,7 +36,7 @@ function AppRoutes() {
         <Route path="/devtools" element={<DevTools />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer /> {/* Footer displayed on every page */}
+      {/* <Footer /> */}
     </>
   );
 }
