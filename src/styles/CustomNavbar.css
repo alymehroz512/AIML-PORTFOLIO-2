@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
 
 .navbar {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Switched to Roboto for consistency with home page */
 }
 
 .nav-link-custom {
@@ -14,14 +14,15 @@
   align-items: center;
   transition: color 0.3s ease;
   cursor: none;
+  font-weight: 500; /* Matches home page button weights */
 }
 
 .nav-link-custom:hover {
-  color: #FF0033 !important;
+  color: #00BFFF !important; /* Updated to match home page --neon blue */
 }
 
 .nav-link-custom.active {
-  color: #FF0033 !important;
+  color: #00BFFF !important; /* Updated to match home page --neon blue */
 }
 
 /* Toggle Button */
@@ -41,12 +42,10 @@
     background-color: #000;
     padding: 10px 0;
   }
-
   .nav-link-custom {
     display: block;
     text-align: start;
   }
-
   /* Reduce Logo on Tablets & Mobile */
   .logo {
     height: 28px; /* Smaller logo */

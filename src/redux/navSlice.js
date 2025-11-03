@@ -22,17 +22,14 @@ const navSlice = createSlice({
     setExpanded: (state, action) => {
       state.isExpanded = action.payload;
     },
-
     // Toggle navbar expanded/collapsed state
     toggleExpanded: (state) => {
       state.isExpanded = !state.isExpanded;
     },
-
     // Collapse navbar when a link is clicked
     collapseNav: (state) => {
       state.isExpanded = false;
     },
-
     // Dynamically update navigation links (optional)
     setNavLinks: (state, action) => {
       state.links = action.payload;
@@ -42,5 +39,4 @@ const navSlice = createSlice({
 
 export const { setExpanded, toggleExpanded, collapseNav, setNavLinks } =
   navSlice.actions;
-
 export default navSlice.reducer;

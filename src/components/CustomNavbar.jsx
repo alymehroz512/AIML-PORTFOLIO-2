@@ -11,7 +11,6 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 const CustomNavbar = () => {
   const dispatch = useDispatch();
   const { isExpanded, links } = useSelector((state) => state.nav);
-
   return (
     <Navbar
       expand="lg"
@@ -24,12 +23,10 @@ const CustomNavbar = () => {
       <Navbar.Brand>
         <img src={Logo} alt="Logo" className="logo ms-3" />
       </Navbar.Brand>
-
       {/* Mobile Toggle Icon */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-0">
         {isExpanded ? <HiX color="white" size={24} /> : <HiMenuAlt3 color="white" size={24} />}
       </Navbar.Toggle>
-
       {/* Navbar Links */}
       <Navbar.Collapse id="basic-navbar-nav" className="ms-3">
         <Nav className="me-auto mt-1 mx-0">
