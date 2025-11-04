@@ -41,7 +41,7 @@ const Footer = () => {
 
                 {/* NavLinks dynamically loaded from Redux */}
                 <div className="footer-nav-container">
-                  <Nav className="footer-nav mt-2">
+                  <Nav className="footer-nav">
                     {links.map((link, index) => (
                       <Nav.Link
                         as={NavLink}
