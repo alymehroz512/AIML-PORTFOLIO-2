@@ -88,7 +88,6 @@
   text-decoration: none;
   position: relative;
   cursor: none;
-  font-weight: 500; /* Matches navbar */
 }
 
 .footer-link:hover,
