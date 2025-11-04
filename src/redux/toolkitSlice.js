@@ -10,7 +10,7 @@ const initialState = {
   tools: [
     {
       name: 'Python',
-      description: 'Core programming language for AI/ML development',
+      description: 'Core programming language for AI & ML development',
       experience: '10 years'
     },
     {
