@@ -7,12 +7,11 @@ import { MdRemoveRedEye, MdDownload } from "react-icons/md";
 import "../styles/Home.css";
 
 const Home = () => {
-  const { name, titles, tagline, descriptionShort } = useSelector(
-    (state) => state.home
-  );
+  const { name, titles, tagline } = useSelector((state) => state.home);
+
   return (
     <Container fluid className="hero-section">
-      <div className="black-overlay"></div> {/* 🖤 semi-transparent black wrapper, lightened */}
+      <div className="black-overlay"></div>
       <div className="inner-container">
         <Col md={12} className="hero-content mt-lg-5 mt-sm-0 text-center">
           <h1 className="hero-heading">
@@ -29,7 +28,9 @@ const Home = () => {
             />
           </h1>
           <p className="hero-subheading">{tagline}</p>
-          <p className="hero-subheading-small">{descriptionShort}</p>
+
+          {/* Removed descriptionShort paragraph */}
+
           <div className="hero-buttons">
             <NavLink to="/projects" className="hero-button">
               Explore Projects

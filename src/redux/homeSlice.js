@@ -5,23 +5,21 @@ const initialState = {
   name: "Syed Imran Saeed Rizvi",
   titles: [
     "Human-Centered AI Engineer",
-    "Machine Intelligence Explorer",
+    "Cognitive Tech Builder",
     "Smart Systems Builder",
   ],
   tagline: "Empowering the Future with Smarter Systems",
-  descriptionShort:
-    "Artifical Intelligence & Machine Learning Engineer passionate about building intelligent systems using Python, TensorFlow, and PyTorch. Focused on solving real-world challenges in predictive analytics, computer vision, and natural language processing.",
 };
 
 const homeSlice = createSlice({
   name: "home",
   initialState,
   reducers: {
-    updateDescription: (state, action) => {
-      state.descriptionFull = action.payload;
+    updateTagline: (state, action) => {
+      state.tagline = action.payload;
     },
   },
 });
 
-export const { updateDescription } = homeSlice.actions;
+export const { updateTagline } = homeSlice.actions;
 export default homeSlice.reducer;

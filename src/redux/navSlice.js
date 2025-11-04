@@ -6,7 +6,7 @@ const initialState = {
   links: [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "Expertise", path: "/skills" },
+    { label: "Skills", path: "/skills" },
     { label: "Experience", path: "/experience" },
     { label: "Projects", path: "/projects" },
     { label: "Toolkit", path: "/devtools" },
