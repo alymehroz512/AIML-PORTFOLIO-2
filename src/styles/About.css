@@ -24,13 +24,13 @@
   padding: clamp(4vh, 8vh, 10vh) clamp(4vw, 6vw, 10vw);
 }
 
-.about-hero-section::before {
+/* .about-hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
-}
+} */
 
 .about-inner-container {
   width: 100%;

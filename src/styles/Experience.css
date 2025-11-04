@@ -25,13 +25,13 @@
   padding: clamp(4vh, 8vh, 10vh) clamp(4vw, 6vw, 10vw);
 }
 
-.experience-hero-section::before {
+/* .experience-hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
-}
+} */
 
 .experience-inner-container {
   width: 100%;
