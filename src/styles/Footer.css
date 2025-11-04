@@ -65,7 +65,7 @@
   display: flex;
   justify-content: flex-start; /* left alignment */
   align-items: flex-start;
-  width: 100%;
+  width: 80%;
   flex-wrap: wrap;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border-radius: var(--border-radius-md); /* Added: Rounded corners for modern card look */
