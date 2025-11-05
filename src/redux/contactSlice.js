@@ -2,10 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   hero: {
-    title: 'Connect, Create & Grow Purposefully'
+    title: 'Connect, Collaborate & Create Impact'
   },
   tagline: {
-    text: 'Collaborating to create meaningful impact through strategy, creativity, and connections that drive shared success.'
+    text: 'Collaborating to create meaningful impact through strategy, creativity, and connections that drive shared success'
   },
   contactInfo: [
     {

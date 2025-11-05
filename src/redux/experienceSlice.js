@@ -6,7 +6,7 @@ const initialState = {
   },
 
   tagline: {
-    text: "Transforming vision into reality through innovation, design, and technology that empower progress in Pakistan’s digital landscape.",
+    text: "Transforming vision into reality through innovation, design, and technology that empower progress in Pakistan’s digital landscape",
   },
 
   experiences: [

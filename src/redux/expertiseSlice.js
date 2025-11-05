@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   hero: {
-    title: "Expertise in AI & Machine Learning",
+    title: "Expert in AI & Predictive Modeling",
   },
   // 🆕 Added this section for the top line in Skills Section
   skillsIntroLine:
