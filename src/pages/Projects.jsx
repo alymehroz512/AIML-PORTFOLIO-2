@@ -9,6 +9,13 @@ import Project2 from "../assets/Project2.jpg";
 import Project3 from "../assets/Project3.jpg";
 import Project4 from "../assets/Project4.jpg";
 import Project5 from "../assets/Project5.jpg";
+import Project6 from "../assets/Project6.jpg";
+import Project7 from "../assets/Project7.jpg";
+import Project8 from "../assets/Project8.jpg";
+import Project9 from "../assets/Project9.jpg";
+import Project10 from "../assets/Project10.jpg";
+import Project11 from "../assets/Project11.jpg";
+import Project12 from "../assets/Project12.jpg";
 // Import icons with colors
 import {
   FaReact,
@@ -41,9 +48,20 @@ import {
 import { TbBrandThreejs } from "react-icons/tb";
 import { VscVscode, VscAzure } from "react-icons/vsc";
 import { MdAnimation } from "react-icons/md";
-
-const imageMap = [Project1, Project2, Project3, Project4, Project5];
-
+const imageMap = [
+  Project1,
+  Project2,
+  Project3,
+  Project4,
+  Project5,
+  Project6,
+  Project7,
+  Project8,
+  Project9,
+  Project10,
+  Project11,
+  Project12,
+];
 const techIcons = {
   Python: <FaPython size={24} color="#3776AB" />,
   TensorFlow: <SiTensorflow size={24} color="#FF6F00" />,
@@ -76,9 +94,22 @@ const techIcons = {
   Blockchain: <SiBlockchaindotcom size={24} color="#29B6F6" />,
   JWT: <FaLock size={24} color="#FFB300" />,
 };
-
 const Projects = () => {
   const { hero, tagline, projects } = useSelector((state) => state.projects);
+
+  // Create projects with original index
+  const projectsWithIndex = projects.map((project, index) => ({
+    project,
+    originalIndex: index,
+  }));
+
+  // Sort: In Progress first, then Complete
+  const sortedProjectsWithIndex = [...projectsWithIndex].sort((a, b) => {
+    if (a.project.status === "In Progress" && b.project.status !== "In Progress") return -1;
+    if (b.project.status === "In Progress" && a.project.status !== "In Progress") return 1;
+    return 0;
+  });
+
   return (
     <>
       {/* 🌌 Hero Section */}
@@ -95,27 +126,37 @@ const Projects = () => {
           {/* 🧠 Tagline */}
           <h2 className="projects-tagline">{tagline.text}</h2>
           <div className="projects-alternating">
-            {projects.map((project, index) => {
-              // Assign imported image dynamically
-              const projectImage = imageMap[index];
+            {sortedProjectsWithIndex.map(({ project, originalIndex }, displayIndex) => {
+              // Assign imported image dynamically using original index
+              const projectImage = imageMap[originalIndex];
               return (
-                <Row
-                  key={index}
-                  className="project-row"
-                >
+                <Row key={originalIndex} className="project-row">
                   <Col md={12} className="project-image-col">
                     <div className="project-image-wrapper">
-                      <img src={projectImage} alt={project.name} className="project-image" />
+                      <img
+                        src={projectImage}
+                        alt={project.name}
+                        className="project-image"
+                      />
                       <span className="project-number">
-                        {String(index + 1).padStart(2, "0")}
+                        {String(displayIndex + 1).padStart(2, "0")}
                       </span>
+                      <div className="project-name-small">
+                        <h3 className="project-title">{project.name}</h3>
+                      </div>
                     </div>
                   </Col>
                   <Col md={12} className="project-content-col">
                     <div className="project-content">
                       <div className="project-header">
                         <h3 className="project-title">{project.name}</h3>
-                        <span className="project-year">{project.year}</span>
+                        <span
+                          className={`project-status ${project.status
+                            .toLowerCase()
+                            .replace(/\s+/g, "-")}`}
+                        >
+                          {project.status}
+                        </span>
                       </div>
                       <p className="project-description">{project.description}</p>
                       <div className="project-techs">

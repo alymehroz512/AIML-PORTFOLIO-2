@@ -1,6 +1,5 @@
 /* Projects.css */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
-
 :root {
   --neon: #00BFFF; /* Deep Sky Blue for hero accents */
   --projects-accent: #008080; /* Teal for projects section (matching About timeline/Expertise skills/Experience) */
@@ -9,7 +8,6 @@
   --border-radius-sm: 6px; /* For small screens/mobile */
   --border-radius-md: 8px; /* For large screens/desktop - rounded modern feel */
 }
-
 /* 🌌 Hero Section */
 .projects-hero-section {
   background-image: url("../assets/ProjectsHero.jpg"); /* Replace with your hero image path */
@@ -25,7 +23,6 @@
   justify-content: flex-start;
   padding: clamp(4vh, 8vh, 10vh) clamp(4vw, 6vw, 10vw);
 }
-
 .projects-hero-section::before {
   content: "";
   position: absolute;
@@ -33,7 +30,6 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
-
 .projects-inner-container {
   width: 100%;
   position: relative;
@@ -41,7 +37,6 @@
   display: flex;
   justify-content: flex-start;
 }
-
 .projects-content {
   width: 100%;
   max-width: 900px;
@@ -52,7 +47,6 @@
   align-items: flex-start;
   justify-content: center;
 }
-
 .projects-subheading {
   color: var(--neon); /* Updated to match home page accent */
   font-size: clamp(2.2rem, 6vw, 6rem);
@@ -62,14 +56,12 @@
   line-height: 1.1;
   font-weight: 700; /* Added for Roboto boldness */
 }
-
 /* 📱 Responsive Layouts */
 @media (max-width: 1024px) {
   .projects-content {
     padding: 40px 30px;
   }
 }
-
 @media (max-width: 768px) {
   .projects-subheading {
     text-align: center;
@@ -78,7 +70,6 @@
     align-items: center;
   }
 }
-
 @media (max-width: 480px) {
   .projects-subheading {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
@@ -87,7 +78,6 @@
     padding: 20px;
   }
 }
-
 /* 🛠️ Projects Section */
 .projects-section {
   background-image: url("../assets/ProjectsSecond.jpg"); /* Replace with your section image path */
@@ -98,7 +88,6 @@
   position: relative;
   font-family: "Roboto", sans-serif; /* Switched to Roboto for consistency */
 }
-
 .projects-section::before {
   content: "";
   position: absolute;
@@ -106,14 +95,12 @@
   background: rgba(255, 255, 255, 0.95); /* Slightly more opaque white for better contrast with teal */
   z-index: 1;
 }
-
 .projects-container {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 /* 🧠 Tagline */
 .projects-tagline {
   text-align: center;
@@ -122,51 +109,44 @@
   color: #333;
   font-weight: 600; /* Added for Roboto */
 }
-
 /* 🔄 Stacked Projects */
 .projects-alternating {
   margin-top: 40px;
 }
-
 .project-row {
   margin-bottom: 60px;
   align-items: stretch;
 }
-
 .project-image-col,
 .project-content-col {
   display: flex;
   align-items: center;
   padding: 0;
 }
-
 .project-image-col {
   text-align: center;
 }
-
 .project-content-col {
   text-align: left;
 }
-
 .project-image-wrapper {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: clamp(300px, 50vw, 600px);
   overflow: hidden;
   max-width: 1200px;
   margin: 0 auto;
   border-top-left-radius: var(--border-radius-md); /* Top-left rounding for image */
   border-top-right-radius: var(--border-radius-md); /* Top-right rounding for image */
 }
-
 .project-image {
   width: 100%;
   height: 100%;
   display: block;
   border-top-left-radius: inherit; /* Inherit top-left from wrapper */
   border-top-right-radius: inherit; /* Inherit top-right from wrapper */
+  object-fit: cover;
 }
-
 .project-number {
   position: absolute;
   top: 20px;
@@ -179,7 +159,30 @@
   font-weight: 500; /* Added for Roboto */
   border-radius: 4px; /* Added: Small pill radius for badge polish */
 }
-
+/* Small screen project name overlay */
+.project-name-small {
+  display: none; /* Hidden by default on large screens */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+}
+.project-name-small .project-title {
+  color: #fff;
+  margin: 0;
+  font-size: clamp(1rem, 4vw, 1.5rem); /* Reduced base size for better fit on small screens */
+  text-transform: uppercase;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.8); /* Added: Semi-transparent black background behind the text */
+  display: inline-block; /* Added: Ensures background wraps tightly around text */
+  padding: 8px 16px; /* Reduced padding for tighter display */
+  border-radius: 4px; /* Reduced radius for smaller profile */
+}
 .project-content {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.7));
   border-bottom: 4px solid var(--projects-accent); /* Updated to teal accent */
@@ -191,7 +194,6 @@
   border-bottom-left-radius: var(--border-radius-md); /* Bottom-left rounding for card */
   border-bottom-right-radius: var(--border-radius-md); /* Bottom-right rounding for card */
 }
-
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -199,7 +201,6 @@
   margin-bottom: 15px;
   flex-wrap: wrap;
 }
-
 .project-title {
   color: var(--text);
   font-size: 1.8rem;
@@ -207,16 +208,20 @@
   margin: 0;
   font-weight: 600; /* Added for Roboto */
 }
-
-.project-year {
-  color: var(--projects-accent); /* Updated to teal accent */
+.project-status {
+  color: #fff; /* Default white text */
   font-size: 1.1rem;
-  background: rgba(0, 128, 128, 0.1); /* Updated to teal background */
   padding: 5px 15px;
   font-weight: 500; /* Added for Roboto */
-  border-radius: 4px; /* Added: Small pill radius for year tag */
+  border-radius: 4px; /* Small pill radius for status tag */
+  text-transform: uppercase;
 }
-
+.project-status.complete {
+  background: rgba(46, 204, 113, 0.8); /* Success green background */
+}
+.project-status.in-progress {
+  background: rgba(52, 152, 219, 0.8); /* Active blue background */
+}
 .project-description {
   color: #444;
   font-size: 1rem;
@@ -225,7 +230,6 @@
   text-align: left;
   font-weight: 400; /* Added for Roboto */
 }
-
 .project-techs {
   display: flex;
   flex-wrap: wrap;
@@ -233,7 +237,6 @@
   margin-top: auto;
   justify-content: flex-start;
 }
-
 .tech-tag {
   display: flex;
   align-items: center;
@@ -245,11 +248,10 @@
   font-weight: 500; /* Added for Roboto */
   border-radius: var(--border-radius-sm); /* Added: Subtle rounding for tech badges */
 }
-
 /* 📱 Responsive Layouts - Updated for border-radius on small/large screens */
 @media (max-width: 1024px) {
   .project-image-wrapper {
-    height: 450px;
+    height: clamp(250px, 40vw, 450px);
     border-top-left-radius: var(--border-radius-md); /* Keep top 8px for mid-large screens */
     border-top-right-radius: var(--border-radius-md);
   }
@@ -259,7 +261,6 @@
     border-bottom-right-radius: var(--border-radius-md);
   }
 }
-
 @media (max-width: 768px) {
   .projects-tagline {
     font-size: clamp(1.2rem, 4.5vw, 1.8rem);
@@ -273,9 +274,15 @@
     width: 100%;
   }
   .project-image-wrapper {
-    height: 400px;
+    height: clamp(200px, 45vw, 400px);
     border-top-left-radius: var(--border-radius-sm); /* Switch top to 6px for tablets/smaller */
     border-top-right-radius: var(--border-radius-sm);
+  }
+  .project-content-col {
+    display: none; /* Hide content column on small screens */
+  }
+  .project-name-small {
+    display: block; /* Show project name on small screens */
   }
   .project-header {
     flex-direction: column;
@@ -283,7 +290,7 @@
     gap: 8px;
     text-align: left;
   }
-  .project-year {
+  .project-status {
     align-self: flex-start;
   }
   .project-title {
@@ -300,11 +307,15 @@
   .tech-tag {
     border-radius: var(--border-radius-sm); /* 6px consistent on small */
   }
+  .project-name-small .project-title {
+    font-size: clamp(0.9rem, 3.5vw, 1.3rem); /* Further reduced for tablet/small screens */
+    padding: 6px 12px; /* Adjusted padding for smaller screens */
+    border-radius: 3px; /* Slightly smaller radius on small screens */
+  }
 }
-
 @media (max-width: 480px) {
   .project-image-wrapper {
-    height: 350px;
+    height: clamp(180px, 40vw, 350px);
     border-top-left-radius: var(--border-radius-sm); /* 6px for small mobile */
     border-top-right-radius: var(--border-radius-sm);
   }
@@ -314,6 +325,14 @@
     top: 15px;
     left: 15px;
   }
+  .project-name-small {
+    padding: 15px;
+  }
+  .project-name-small .project-title {
+    font-size: clamp(0.8rem, 3vw, 1.1rem); /* Even smaller for very small mobile screens */
+    padding: 4px 10px; /* Further adjusted for very small screens */
+    border-radius: 3px;
+  }
   .project-content {
     padding: 15px;
     border-bottom-left-radius: var(--border-radius-sm); /* 6px for small mobile */
@@ -322,7 +341,7 @@
   .project-title {
     font-size: 1.3rem;
   }
-  .project-year {
+  .project-status {
     font-size: 1rem;
     padding: 4px 12px;
   }
@@ -333,7 +352,6 @@
     border-radius: var(--border-radius-sm);
   }
 }
-
 /* Large screens (above 1024px) - No extra media query needed; defaults to 8px */
 @media (min-width: 1025px) {
   .project-image-wrapper {
