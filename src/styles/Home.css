@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
-
 :root {
   --neon: #00BFFF; /* Deep Sky Blue for tech harmony */
   --text: #ffffff;
   --gradient: linear-gradient(135deg, var(--neon), #1E3A8A); /* Blue gradient for buttons */
   --border-radius-sm: 6px; /* For small screens/mobile */
   --border-radius-md: 8px; /* For large screens/desktop - recommended update for softer feel */
+  --summary-accent: #008080; /* Teal accent for summary section to match timeline theme */
 }
-
 /* 🌌 Hero Section */
 .hero-section {
   background-image: url("../assets/HomeHero.jpg");
@@ -24,7 +23,6 @@
   padding: 8vh 0;
   overflow: hidden;
 }
-
 /* 🖤 Black overlay (lightened for better text visibility) */
 /* .black-overlay {
   position: absolute;
@@ -32,10 +30,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); 
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 } */
-
 /* 🧠 Inner Container - Now centered */
 .inner-container {
   width: 100%;
@@ -47,7 +44,6 @@
   align-items: center;
   padding: 0 2rem; /* Symmetric padding */
 }
-
 /* 🧠 Hero Content - Centered text */
 .hero-content {
   width: 100%;
@@ -59,7 +55,6 @@
   justify-content: center;
   animation: fadeIn 1s ease-out; /* Subtle entrance animation */
 }
-
 /* Fade-in animation */
 @keyframes fadeIn {
   from {
@@ -71,7 +66,6 @@
     transform: translateY(0);
   }
 }
-
 /* 🎯 Hero Heading */
 .hero-heading {
   color: var(--neon);
@@ -84,7 +78,6 @@
   min-height: 90px;
   font-weight: 700; /* Bold for headings in Roboto */
 }
-
 /* ✨ Subheadings */
 .hero-subheading {
   color: #ffffff;
@@ -94,7 +87,6 @@
   text-transform: uppercase;
   font-weight: 500;
 }
-
 .hero-subheading-small {
   color: #ffffff;
   font-size: 18px; /* Refined */
@@ -104,7 +96,6 @@
   text-align: center; /* Ensure center */
   font-weight: 400; /* Lighter body in Roboto */
 }
-
 /* 🎯 Buttons - Now with gradient and responsive border-radius */
 .hero-buttons {
   display: flex;
@@ -112,7 +103,6 @@
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-
 .hero-button {
   position: relative;
   display: inline-flex;
@@ -133,7 +123,6 @@
   border-radius: var(--border-radius-md); /* Updated to use CSS var for large screens (8px default) */
   font-family: inherit; /* Inherit Roboto for buttons */
 }
-
 .hero-button::before {
   content: "";
   position: absolute;
@@ -144,28 +133,23 @@
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
   transition: left 0.5s;
 }
-
 .hero-button:hover::before {
   left: 100%;
 }
-
 .hero-button::after {
   content: none; /* Simplified borders for gradient style */
 }
-
 .hero-button:hover,
 .hero-button:focus-visible {
   transform: translateY(-5px); /* More lift */
   box-shadow: 0 10px 25px rgba(0, 191, 255, 0.3), /* Enhanced blue glow */
               0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 .hero-button:active {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 191, 255, 0.25),
               0 2px 8px rgba(0, 0, 0, 0.2);
 }
-
 /* 🧠 MD Icons */
 .icon {
   width: 22px;
@@ -173,12 +157,10 @@
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
 }
-
 .hero-button:hover .icon,
 .hero-button:focus-visible .icon {
   transform: translateX(6px); /* More slide */
 }
-
 /* 📱 Responsive Scaling - Updated for border-radius on small/large screens */
 @media (max-width: 1024px) {
   .hero-heading {
@@ -198,7 +180,6 @@
     border-radius: var(--border-radius-md); /* Keep 8px for mid-large screens */
   }
 }
-
 @media (max-width: 768px) {
   .hero-heading {
     font-size: 48px;
@@ -225,7 +206,6 @@
     height: 18px;
   }
 }
-
 @media (max-width: 425px) {
   .hero-heading {
     font-size: 36px;
@@ -254,7 +234,6 @@
     height: 16px;
   }
 }
-
 @media (max-width: 375px) {
   .hero-heading {
     font-size: 32px;
@@ -275,7 +254,6 @@
     height: 14px;
   }
 }
-
 @media (max-width: 320px) {
   .hero-heading {
     font-size: 28px;
@@ -296,10 +274,161 @@
     height: 12px;
   }
 }
-
 /* Large screens (above 1024px) - No extra media query needed; defaults to 8px */
 @media (min-width: 1025px) {
   .hero-button {
     border-radius: var(--border-radius-md); /* Explicit 8px for large desktops */
+  }
+}
+/* 📄 Professional Summary Section - Timeline Bullet Style */
+.home-summary-section {
+  background-image: url("../assets/HomeSecond.jpg"); /* Assume a second home background; adjust path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(60px, 8vw, 120px) clamp(4vw, 6vw, 10vw);
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+.home-summary-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95); /* White overlay for readability, matching about section */
+  z-index: 1;
+}
+.summary-inner-container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+.summary-content {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.summary-heading {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: clamp(30px, 5vw, 60px);
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.summary-timeline {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.summary-timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 80px; /* Space for bullet on left */
+}
+.summary-timeline-item::before {
+  content: attr(data-number); /* Display 01, 02, etc. */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--summary-accent);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 2;
+  margin-left: 10px;
+}
+.summary-timeline-content {
+  width: 100%;
+  padding: 0;
+}
+.summary-timeline-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000; /* Black color as requested */
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px 20px;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-left: 3px solid var(--summary-accent);
+}
+/* Vertical line connecting bullets */
+.summary-timeline::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 2px;
+  height: calc(100% - 40px);
+  background: var(--summary-accent);
+  z-index: 1;
+}
+/* 📱 Responsive for Summary Timeline */
+@media (max-width: 768px) {
+  .summary-heading {
+    font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+  }
+  .summary-timeline-item {
+    padding-left: 70px;
+    margin-bottom: 20px;
+  }
+  .summary-timeline-item::before {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    margin-left: 15px;
+  }
+  .summary-timeline::before {
+    left: 17.5px;
+  }
+  .summary-timeline-text {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+}
+@media (max-width: 480px) {
+  .summary-timeline-item {
+    padding-left: 45px;
+  }
+  .summary-timeline-item::before {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    margin-left: 12px;
+  }
+  .summary-timeline::before {
+    left: 15px;
+  }
+  .summary-timeline-text {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1025px) {
+  .summary-timeline-item::before {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  .summary-timeline-text {
+    font-size: 18px;
+    padding: 20px 25px;
   }
 }

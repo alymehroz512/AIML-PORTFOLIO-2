@@ -230,7 +230,7 @@
   font-size: 1rem;
   transition: border-bottom-color 0.3s ease;
   font-family: "Roboto", sans-serif; /* Updated to Roboto */
-  background-color: #E3F2FD; /* Light blue bg for harmony */
+  /* background-color: #E3F2FD;  */
   font-weight: 400; /* Added for Roboto */
   border-radius: var(--border-radius-sm); /* Added: Subtle rounding for inputs */
 }
