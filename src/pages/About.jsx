@@ -3,6 +3,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import * as FaIcons from "react-icons/fa";
 import "../styles/About.css";
+
 const About = () => {
   const { hero, milestones, timelineHeading } = useSelector((state) => state.about);
   return (
@@ -41,4 +42,5 @@ const About = () => {
     </>
   );
 };
+
 export default About;
