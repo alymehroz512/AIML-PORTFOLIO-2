@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const initialState = {
   hero: {
     title: "Artificial Intelligence & Forward",
@@ -7,23 +6,21 @@ const initialState = {
   timelineHeading:
     "Building intelligent AI applications with intuitive, high performance design that turns data into impactful solutions",
   milestones: [
-    { icon: "FaBrain", title: "Started My AI Journey", description: "Began exploring Artificial Intelligence and Machine Learning concepts, laying the foundation for my career." },
-    { icon: "FaChartLine", title: "First ML Project", description: "Developed my first machine learning model for a predictive analytics project." },
-    { icon: "FaNetworkWired", title: "Advanced ML Models", description: "Worked on complex algorithms including NLP and computer vision projects." },
-    { icon: "FaDatabase", title: "Industry Experience", description: "Joined a tech company as an AI/ML engineer, delivering data-driven solutions." },
-    { icon: "FaRobot", title: "AI Research Contributions", description: "Contributed to research papers and internal AI innovation projects." },
-    { icon: "FaCamera", title: "Leadership Role", description: "Led a small team of AI engineers, mentoring juniors and managing projects." },
-    { icon: "FaCogs", title: "Deployment & Production", description: "Deployed ML models in production environments and optimized pipelines." },
-    { icon: "FaServer", title: "Cloud & Scalable AI", description: "Integrated cloud solutions and scalable AI pipelines using AWS and GCP." },
-    { icon: "FaCloud", title: "AI Solutions for Businesses", description: "Delivered AI-driven solutions improving business KPIs and automation." },
-    { icon: "FaMicrochip", title: "10 Years of Experience", description: "Celebrating a decade of AI & ML expertise, focusing on innovation and impact." },
+    { icon: "FaGraduationCap", title: "Bachelor's in Computer Engineering", description: "Graduated from Sir Syed University of Engineering & Technology, building a solid foundation in programming, algorithms, and hardware-software integration to kickstart my tech journey." },
+    { icon: "FaUniversity", title: "Master's in Computer Science", description: "Completed MS at University of Bridgeport, diving deeper into advanced AI concepts, data structures, and software engineering principles that shaped my expertise in machine learning." },
+    { icon: "FaBookOpen", title: "Core Interests in AI & ML", description: "Passionate about exploring neural networks, NLP, and computer vision—constantly experimenting with frameworks like PyTorch and TensorFlow to innovate in predictive analytics and automation." },
+    { icon: "FaBriefcase", title: "Software Engineer at Bloomfire", description: "Started professional career in 2015, developing full-stack AI solutions with Python, Flask, and Scikit-learn, focusing on scalable data pipelines and real-world problem-solving." },
+    { icon: "FaChartLine", title: "Advanced ML & Data Science", description: "Honed skills in big data tools like Apache Spark and Kafka, creating ETL processes and models that drive business insights, while embracing agile methodologies for efficient delivery." },
+    { icon: "FaUsers", title: "Senior AI/ML Engineer at Inoxoft", description: "From 2018, led ML projects integrating cloud platforms like Azure and AWS, mentoring teams on MLOps best practices, and deploying robust microservices for enterprise applications." },
+    { icon: "FaRocket", title: "Lead Python Developer at Lenovo", description: "Since 2022, architecting distributed AI systems with Kubernetes and Docker, optimizing performance for high-throughput applications, and collaborating cross-functionally for impactful results." },
+    { icon: "FaTrophy", title: "Key Achievements & Certifications", description: "Earned AWS ML Specialty, Google Cloud Professional ML Engineer, Azure AI Associate, and CKA certifications—validating over 10 years of hands-on experience in deploying production-grade AI solutions." },
+    { icon: "FaLightbulb", title: "Future Aspirations & Innovations", description: "Aiming to pioneer ethical AI advancements, lead R&D in generative models, and contribute to open-source projects that democratize machine learning for global challenges like healthcare and sustainability." },
+    { icon: "FaProjectDiagram", title: "Hands-On Projects & Contributions", description: "Built distributed training platforms, real-time ML pipelines processing 50k+ events/sec, and AutoML systems reducing development time by 80%—always pushing boundaries in scalable, efficient AI tech." },
   ],
 };
-
 const aboutSlice = createSlice({
   name: "about",
   initialState,
   reducers: {},
 });
-
 export default aboutSlice.reducer;
